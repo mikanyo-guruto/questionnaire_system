@@ -3,37 +3,78 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width==device-width: initial-scale=1.0;maximm-scale=1.0; user-scaleble=1;">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
 		<title>トップページ</title>
 	</head>
 
 	<body>
 		<h1>専攻一覧</h1>
-		<ul style="list-style:none;">
-			<li><a href="major_list/supergame.html">スーパーゲームクリエイター専攻</a></li>
-			<li><a href="#">ゲームプログラマー専攻</a></li>
-			<li><a href="#">ゲーム企画・シナリオ専攻</a></li>
-			<li><a href="#">ゲームキャラクターデザイン専攻</a></li>
-			<li><a href="#">ゲームCGデザイン専攻</a></li>
-			<li><a href="#">ゲームアプリクリエイター専攻</a></li>
-			<li><a href="#">アーケードゲームクリエイター専攻</a></li>
-			<li><a href="#">プロゲーマー＆デバッガー専攻</a></li>
-			<li><a href="#">スーパーITエンジニア専攻</a></li>
-			<li><a href="#">プログラマー専攻</a></li>
-			<li><a href="#">スマホアプリ専攻</a></li>
-			<li><a href="#">Webクリエイター専攻</a></li>
-			<li><a href="#">ネットワーク＆セキュリティー専攻</a></li>
-			<li><a href="#">スーパーCGクリエイター専攻</a></li>
-			<li><a href="#">スーパーデジタルメディア専攻</a></li>
-			<li><a href="#">CG映像クリエイター専攻</a></li>
-			<li><a href="#">総合アニメーション専攻</a></li>
-			<li><a href="#">コミックイラスト専攻</a></li>
-			<li><a href="#">背景・アイテムデザイン専攻</a></li>
-			<li><a href="#">総合マンガ専攻</a></li>
-			<li><a href="#">プロデジタルマンガ専攻</a></li>
-			<li><a href="#">キャラクターライセンスビジネス専攻</a></li>
-			<li><a href="#">ロボット専攻</a></li>
-			<li><a href="#">プロダクトデザイン専攻</a></li>
-			<li><a href="#">ライト＆イルミネーションデザイン専攻</a></li>
-		</ul>
+		<div class="major_list">
+			<div class="game_major" onclick="obj=document.getElementById('game').style; obj.display=(obj.display=='none')?'block':'none';">
+				<a href="#" style="cursor:pointer;"><h3>ゲーム</h3></a>
+			</div>
+			<div id="game" style="display:none;clear:both;">
+				<ul style="list-style:none;">
+					<li><a href="major_list/supergame.html">スーパーゲームクリエイター専攻</a></li>
+					<li><a href="#">ゲームプログラマー専攻</a></li>
+					<li><a href="#">ゲーム企画・シナリオ専攻</a></li>
+					<li><a href="#">ゲームキャラクターデザイン専攻</a></li>
+					<li><a href="#">ゲームCGデザイン専攻</a></li>
+					<li><a href="#">ゲームアプリクリエイター専攻</a></li>
+					<li><a href="#">アーケードゲームクリエイター専攻</a></li>
+					<li><a href="#">プロゲーマー＆デバッガー専攻</a></li>
+				</ul>
+			</div>
+
+			<div class="creator_major" onclick="obj=document.getElementById('creator').style; obj.display=(obj.display=='none')?'block':'none';">
+				<a href="#" style="cursor:pointer;"><h3>クリエイター</h3></a>
+			</div>
+			<div id="creator" style="display:none;clear:both;">
+				<ul style="list-style:none;">
+					<li><a href="#">スーパーCGクリエイター専攻</a></li>
+					<li><a href="#">スーパーデジタルメディア専攻</a></li>
+					<li><a href="#">CG映像クリエイター専攻</a></li>
+					<li><a href="#">総合アニメーション専攻</a></li>
+				</ul>
+			</div>
+
+			<div class="illust_major" onclick="obj=document.getElementById('illust').style; obj.display=(obj.display=='none')?'block':'none';">
+				<a href="#" style="cursor:pointer;"><h3>イラスト</h3></a>
+			</div>
+			<div id="illust" style="display:none;clear:both;">
+				<ul style="list-style:none;">
+					<li><a href="3">コミックイラスト専攻</a></li>
+					<li><a href="#">背景・アイテムデザイン専攻</a></li>
+				</ul>
+			</div>
+
+			<div class="manga_major" onclick="obj=document.getElementById('manga').style; obj.display=(obj.display=='none')?'block':'none';">
+				<a href="#" style="cursor:pointer;"><h3>マンガ</h3></a>
+			</div>
+			<div id="manga" style="display:none;clear:both;">
+				<ul style="list-style:none;">
+					<li><a href="#">総合マンガ専攻</a></li>
+					<li><a href="#">プロデジタルマンガ専攻</a></li>
+					<li><a href="#">キャラクターライセンスビジネス専攻</a></li>
+				</ul>
+			</div>
+
+			<div class="it_major" onclick="obj=document.getElementById('it').style; obj.display=(obj.display=='none')?'block':'none';">
+				<a href="#" style="cursor:pointer;"><h3>IT&ロボット</h3></a>
+			</div>
+			<div id="it" style="display:none;clear:both;">
+				<ul style="list-style:none;">
+					<li><a href="#">スーパーITエンジニア専攻</a></li>
+					<li><a href="#">プログラマー専攻</a></li>
+					<li><a href="#">スマホアプリ専攻</a></li>
+					<li><a href="#">Webクリエイター専攻</a></li>
+					<li><a href="#">ネットワーク＆セキュリティー専攻</a></li>
+					<li><a href="#">ロボット専攻</a></li>
+					<li><a href="#">プロダクトデザイン専攻</a></li>
+					<li><a href="#">ライト＆イルミネーションデザイン専攻</a></li>
+				</ul>
+			</div>
+		</div>
 	</body>
 </html>
