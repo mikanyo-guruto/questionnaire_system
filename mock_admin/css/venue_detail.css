@@ -1,0 +1,52 @@
+.wrap {
+	margin: 0 auto;
+	width: 1200px;
+}
+.info h2 {
+	float: left;
+}
+.info p {
+	float: right;
+	font-size: 18px;
+	padding-top: 20px;
+	padding-right: 20px;
+}
+.info hr {
+	clear: both;
+}
+.info_table {
+	margin: 0 auto;
+	height: 400px;
+	width: 1000px;
+}
+.info_table th, td {
+	border: solid 1px black;
+	padding: 10px;
+}
+.info_table th {
+	width: 350px;
+}
+.info_table td {
+	text-align: left;
+}
+.info_table .overview {
+	height: 100px;
+}
+.info_table:after {
+	clear: both;
+}
+
+/* --- 補足 ---- */
+.info_supplement {
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 1000px;
+}
+.info_supplement th, td {
+	border: solid 1px black;
+}
+.info_supplement th {
+	width: 350px;
+}
+
+/* --- END 補足 --- */
