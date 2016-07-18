@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::get('/world/game', function () {
+	return view('game');
+});
+
+Route::get('/world/illust', function() {
+	return view('illust');
+});
+
+Route::get('/world/it', function() {
+	return view('it');
 });
