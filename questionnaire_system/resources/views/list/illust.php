@@ -35,7 +35,7 @@
 
 <body class="drawer drawer--right notop world illust">
 	<header role="banner">
-		<h1><a href="../index.html"><img src="../assets/images/techlogo.png" alt=""></a></h1>
+		<h1><a href="/"><img src="../assets/images/techlogo.png" alt=""></a></h1>
 		<h2>イラストワールド</h2>
 		<button type="button" class="drawer-toggle drawer-hamburger">
 			<span class="sr-only">toggle navigation</span>
@@ -44,7 +44,7 @@
 		<nav class="drawer-nav" role="navigation">
 			<ul class="drawer-menu">
 				<li class="drawer-brand">Menu</li>
-				<li><a class="drawer-menu-item" href="../index.html">Top</a></li>
+				<li><a class="drawer-menu-item" href="/">Top</a></li>
 				<li><a class="drawer-menu-item" href="game.html">Gameワールド</a></li>
 				<li><a class="drawer-menu-item" href="illust.html">Illustワールド</a></li>
 				<li><a class="drawer-menu-item" href="it.html">ITワールド</a></li>
@@ -56,7 +56,7 @@
 		<div class="work">
 			<ul>
 				<li>
-					<a href="work/illust/w01">
+					<a href="w01">
 					<img src="../assets/images/techlogo.png" alt="">
 					<p>作品名:OOO<br>代表者:OOO</p>
 					</a>

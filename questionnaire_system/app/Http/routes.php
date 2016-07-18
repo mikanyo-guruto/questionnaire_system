@@ -11,18 +11,22 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function() {
     return view('index');
 });
 
-Route::get('/world/game', function () {
+Route::get('/list/game', function() {
 	return view('game');
 });
 
-Route::get('/world/illust', function() {
-	return view('illust');
+Route::get('/list/illust', function() {
+	return view('list/illust');
 });
 
-Route::get('/world/it', function() {
+Route::get('/list/it', function() {
 	return view('it');
+});
+
+Route::get('/list/illust/w01', function() {
+	return view('w01');
 });

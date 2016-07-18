@@ -43,11 +43,11 @@
 		<nav class="drawer-nav" role="navigation">
 			<ul class="drawer-menu">
 				<li class="drawer-brand">Menu</li>
-				<li><a class="drawer-menu-item" href="index.html">Top</a></li>
-				<li><a class="drawer-menu-item" href="world/game.html">Gameワールド</a></li>
-				<li><a class="drawer-menu-item" href="world/illust.html">Illustワールド</a></li>
-				<li><a class="drawer-menu-item" href="world/it.html">ITワールド</a></li>
-				<li><a class="drawer-menu-item" href="ranking/index.html">ランキング</a></li>
+				<li><a class="drawer-menu-item" href="/">Top</a></li>
+				<li><a class="drawer-menu-item" href="list/game">Gameワールド</a></li>
+				<li><a class="drawer-menu-item" href="list/illust">Illustワールド</a></li>
+				<li><a class="drawer-menu-item" href="list/it">ITワールド</a></li>
+				<li><a class="drawer-menu-item" href="ranking/index">ランキング</a></li>
 		</nav>
 	</header>
 	<main role="main">
@@ -66,9 +66,9 @@
 				<li class="it"><a href="world/it.html">IT</a></li>
 			</ul> -->
 			<ul>
-				<li class="game"><a href="world/game"><img src="assets/images/game.png" alt=""></a></li>
-				<li class="illust"><a href="world/illust"><img src="assets/images/illust.png" alt=""></a></li>
-				<li class="it"><a href="world/it"><img src="assets/images/it.png" alt=""></a></li>
+				<li class="game"><a href="list/game"><img src="assets/images/game.png" alt="ゲーム"></a></li>
+				<li class="illust"><a href="list/illust"><img src="assets/images/illust.png" alt="イラスト"></a></li>
+				<li class="it"><a href="list/it"><img src="assets/images/it.png" alt="IT"></a></li>
 			</ul>
 		</div>
 		<div class="question">
