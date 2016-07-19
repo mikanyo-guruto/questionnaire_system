@@ -36,7 +36,7 @@
 <body class="drawer drawer--right notop world illust">
 	<header role="banner">
 		<h1><a href="/"><img src="../assets/images/techlogo.png" alt=""></a></h1>
-		<h2>イラストワールド</h2>
+		<h2>ゲームワールド</h2>
 		<button type="button" class="drawer-toggle drawer-hamburger">
 			<span class="sr-only">toggle navigation</span>
 			<span class="drawer-hamburger-icon"></span>
@@ -56,7 +56,7 @@
 		<div class="work">
 			<ul>
 				<li>
-					<a href="/w01">
+					<a href="#">
 					<img src="../assets/images/techlogo.png" alt="">
 					<p>作品名:OOO<br>代表者:OOO</p>
 					</a>

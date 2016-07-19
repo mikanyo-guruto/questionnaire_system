@@ -16,17 +16,17 @@ Route::get('/', function() {
 });
 
 Route::get('/list/game', function() {
-	return view('game');
+	return view('list/game');
 });
 
 Route::get('/list/illust', function() {
 	return view('list/illust');
 });
 
-Route::get('/list/it', function() {
-	return view('it');
+Route::get('/w01', function() {
+	return view('w01');
 });
 
-Route::get('/list/illust/w01', function() {
-	return view('w01');
+Route::get('/list/it', function() {
+	return view('list/it');
 });
