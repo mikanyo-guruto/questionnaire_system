@@ -19,14 +19,42 @@ Route::get('/list/game', function() {
 	return view('list/game');
 });
 
+Route::get('/list/detail/game', function() {
+	return view('list/detail/game');
+});
+
 Route::get('/list/illust', function() {
 	return view('list/illust');
 });
 
-Route::get('/w01', function() {
-	return view('w01');
+Route::get('/list/detail/illust', function() {
+	return view('list/detail/illust');
 });
 
 Route::get('/list/it', function() {
 	return view('list/it');
+});
+
+Route::get('/list/detail/it', function() {
+	return view('list/detail/it');
+});
+
+Route::get('/ranking/index', function() {
+	return view('ranking/index');
+});
+
+Route::get('/ranking/all', function() {
+	return view('ranking/all');
+});
+
+Route::get('/ranking/game', function() {
+	return view('ranking/game');
+});
+
+Route::get('/ranking/illust', function() {
+	return view('ranking/illust');
+});
+
+Route::get('/ranking/it', function() {
+	return view('ranking/it');
 });

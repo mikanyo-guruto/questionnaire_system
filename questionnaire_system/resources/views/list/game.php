@@ -45,10 +45,10 @@
 			<ul class="drawer-menu">
 				<li class="drawer-brand">Menu</li>
 				<li><a class="drawer-menu-item" href="/">Top</a></li>
-				<li><a class="drawer-menu-item" href="list/game">Gameワールド</a></li>
-				<li><a class="drawer-menu-item" href="list/illust">Illustワールド</a></li>
-				<li><a class="drawer-menu-item" href="list/it">ITワールド</a></li>
-				<li><a class="drawer-menu-item" href="ranking/index">ランキング</a></li>
+				<li><a class="drawer-menu-item" href="/list/game">Gameワールド</a></li>
+				<li><a class="drawer-menu-item" href="/list/illust">Illustワールド</a></li>
+				<li><a class="drawer-menu-item" href="/list/it">ITワールド</a></li>
+				<li><a class="drawer-menu-item" href="/ranking/index">ランキング</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -56,35 +56,35 @@
 		<div class="work">
 			<ul>
 				<li>
-					<a href="#">
+					<a href="/list/detail/game">
 					<img src="../assets/images/techlogo.png" alt="">
 					<p>作品名:OOO<br>代表者:OOO</p>
 					</a>
 					<a href="$"><img src="../assets/images/techlogo.png" alt=""></a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/list/detail/game">
 					<img src="../assets/images/techlogo.png" alt="">
 					<p>作品名:OOO<br>代表者:OOO</p>
 					</a>
 					<a href="$"><img src="../assets/images/techlogo.png" alt=""></a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/list/detail/game">
 					<img src="../assets/images/techlogo.png" alt="">
 					<p>作品名:OOO<br>代表者:OOO</p>
 					</a>
 					<a href="$"><img src="../assets/images/techlogo.png" alt=""></a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/list/detail/game">
 					<img src="../assets/images/techlogo.png" alt="">
 					<p>作品名:OOO<br>代表者:OOO</p>
 					</a>
 					<a href="$"><img src="../assets/images/techlogo.png" alt=""></a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="/list/detail/game">
 					<img src="../assets/images/techlogo.png" alt="">
 					<p>作品名:OOO<br>代表者:OOO</p>
 					</a>

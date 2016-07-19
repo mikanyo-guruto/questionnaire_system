@@ -44,11 +44,11 @@
 		<nav class="drawer-nav" role="navigation">
 			<ul class="drawer-menu">
 				<li class="drawer-brand">Menu</li>
-				<li><a class="drawer-menu-item" href="../../../index.html">Top</a></li>
-				<li><a class="drawer-menu-item" href="../../../world/game.html">Gameワールド</a></li>
-				<li><a class="drawer-menu-item" href="../../../world/illust.html">Illustワールド</a></li>
-				<li><a class="drawer-menu-item" href="../../../world/it.html">ITワールド</a></li>
-				<li><a class="drawer-menu-item" href="../../../ranking/index.html">ランキング</a></li>
+				<li><a class="drawer-menu-item" href="/">Top</a></li>
+				<li><a class="drawer-menu-item" href="/list/game">Gameワールド</a></li>
+				<li><a class="drawer-menu-item" href="/list/illust">Illustワールド</a></li>
+				<li><a class="drawer-menu-item" href="/list/it">ITワールド</a></li>
+				<li><a class="drawer-menu-item" href="/ranking/index">ランキング</a></li>
 			</ul>
 		</nav>
 	</header>

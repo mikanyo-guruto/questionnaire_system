@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>WeAreTECH.C.</title>
+<title>サイトタイトル</title>
 
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -33,10 +33,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/js/drawer.min.js"></script>
 </head>
 
-<body class="drawer drawer--right notop world illust">
+<body class="drawer drawer--right notop work ollranking">
 	<header role="banner">
-		<h1><a href="../index.html"><img src="../assets/images/techlogo.png" alt=""></a></h1>
-		<h2>イラストワールド</h2>
+		<h1><a href="/"><img src="../assets/images/techlogo.png" alt=""></a></h1>
+		<h2>総合ランキング</h2>
 		<button type="button" class="drawer-toggle drawer-hamburger">
 			<span class="sr-only">toggle navigation</span>
 			<span class="drawer-hamburger-icon"></span>
@@ -44,46 +44,51 @@
 		<nav class="drawer-nav" role="navigation">
 			<ul class="drawer-menu">
 				<li class="drawer-brand">Menu</li>
-				<li><a class="drawer-menu-item" href="../index.html">Top</a></li>
-				<li><a class="drawer-menu-item" href="game.html">Gameワールド</a></li>
-				<li><a class="drawer-menu-item" href="illust.html">Illustワールド</a></li>
-				<li><a class="drawer-menu-item" href="it.html">ITワールド</a></li>
-				<li><a class="drawer-menu-item" href="../ranking/index.html">ランキング</a></li>
+				<li><a class="drawer-menu-item" href="/">Top</a></li>
+				<li><a class="drawer-menu-item" href="/list/game">Gameワールド</a></li>
+				<li><a class="drawer-menu-item" href="/list/illust">Illustワールド</a></li>
+				<li><a class="drawer-menu-item" href="/list/it">ITワールド</a></li>
+				<li><a class="drawer-menu-item" href="/ranking/index">ランキング</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main role="main">
 		<div class="work">
 			<ul>
-				<li>
-					<a href="work/illust/w01.html">
-					<img src="../assets/images/techlogo.png" alt="">
-					<p>作品名:OOO<br>代表者:OOO</p>
-					</a>
-					<a href="$"><img src="../assets/images/techlogo.png" alt=""></a>
-				</li>
-				<li>
+				<li class="afcf">
+					<img class="number" src="../assets/images/gold.png" alt="">
 					<a href="#">
 					<img src="../assets/images/techlogo.png" alt="">
 					<p>作品名:OOO<br>代表者:OOO</p>
 					</a>
 					<a href="$"><img src="../assets/images/techlogo.png" alt=""></a>
 				</li>
-				<li>
+				<li class="afcf">
+					<img class="number" src="../assets/images/silver.png" alt="">
 					<a href="#">
 					<img src="../assets/images/techlogo.png" alt="">
 					<p>作品名:OOO<br>代表者:OOO</p>
 					</a>
 					<a href="$"><img src="../assets/images/techlogo.png" alt=""></a>
 				</li>
-				<li>
+				<li class="afcf">
+					<img class="number" src="../assets/images/bronze.png" alt="">
 					<a href="#">
 					<img src="../assets/images/techlogo.png" alt="">
 					<p>作品名:OOO<br>代表者:OOO</p>
 					</a>
 					<a href="$"><img src="../assets/images/techlogo.png" alt=""></a>
 				</li>
-				<li>
+				<li class="afcf">
+					<p class="number">4位</p>
+					<a href="#">
+					<img src="../assets/images/techlogo.png" alt="">
+					<p>作品名:OOO<br>代表者:OOO</p>
+					</a>
+					<a href="$"><img src="../assets/images/techlogo.png" alt=""></a>
+				</li>
+				<li class="afcf">
+					<p class="number">5位</p>
 					<a href="#">
 					<img src="../assets/images/techlogo.png" alt="">
 					<p>作品名:OOO<br>代表者:OOO</p>
@@ -91,7 +96,7 @@
 					<a href="$"><img src="../assets/images/techlogo.png" alt=""></a>
 				</li>
 			</ul>
-	</div>
+		</div>
 	</main>
 <!-- <footer role="contentinfo"></footer> -->
 </body>

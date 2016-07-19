@@ -35,7 +35,7 @@
 
 <body class="drawer drawer--right notop ranking">
 	<header role="banner">
-		<h1><a href="../index.html"><img src="../assets/images/techlogo.png" alt=""></a></h1>
+		<h1><a href="/"><img src="../assets/images/techlogo.png" alt=""></a></h1>
 		<h2>ランキング</h2>
 		<button type="button" class="drawer-toggle drawer-hamburger">
 			<span class="sr-only">toggle navigation</span>
@@ -44,11 +44,11 @@
 		<nav class="drawer-nav" role="navigation">
 			<ul class="drawer-menu">
 				<li class="drawer-brand">Menu</li>
-				<li><a class="drawer-menu-item" href="../index.html">Top</a></li>
-				<li><a class="drawer-menu-item" href="../world/game.html">Gameワールド</a></li>
-				<li><a class="drawer-menu-item" href="../world/illust.html">Illustワールド</a></li>
-				<li><a class="drawer-menu-item" href="../world/it.html">ITワールド</a></li>
-				<li><a class="drawer-menu-item" href="index.html">ランキング</a></li>
+				<li><a class="drawer-menu-item" href="/">Top</a></li>
+				<li><a class="drawer-menu-item" href="/list/game">Gameワールド</a></li>
+				<li><a class="drawer-menu-item" href="/list/illust">Illustワールド</a></li>
+				<li><a class="drawer-menu-item" href="/list/it">ITワールド</a></li>
+				<li><a class="drawer-menu-item" href="/ranking/index">ランキング</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -84,7 +84,7 @@
 					</a>
 				</li>
 			</ul>
-			<a href="oll.html"><p>もっと見る</p></a>
+			<a href="/ranking/all"><p>もっと見る</p></a>
 
 			<h2>ゲームランキング</h2>
 			<div class="afcf">
@@ -117,7 +117,7 @@
 					</a>
 				</li>
 			</ul>
-			<a href="game.html"><p>もっと見る</p></a>
+			<a href="/ranking/game"><p>もっと見る</p></a>
 
 			<h2>イラストランキング</h2>
 			<div class="afcf">
@@ -150,7 +150,7 @@
 					</a>
 				</li>
 			</ul>
-			<a href="illust.html"><p>もっと見る</p></a>
+			<a href="/ranking/illust"><p>もっと見る</p></a>
 
 			<h2>ITランキング</h2>
 			<div class="afcf">
@@ -184,7 +184,7 @@
 				</li>
 			</ul>
 			</div>
-			<a href="it.html"><p>もっと見る</p></a>
+			<a href="/ranking/it"><p>もっと見る</p></a>
 	</main>
 <!-- <footer role="contentinfo"></footer> -->
 </body>
