@@ -3,10 +3,28 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class Product extends Model
 {
-	protected $table = 'products';
+
+	static public function index()
+	{
+		$table = DB::table('products')->get();
+
+		return $table;
+	}
+
+
+	/// 指定したIDの詳細を取得
+	static public function findId($id)
+	{
+		$product = DB::table('products')
+			->where('id', $id)
+			->first();
+
+		return $product;
+	}
 
 	public function member()
 	{

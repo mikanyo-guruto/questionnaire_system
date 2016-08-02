@@ -3,68 +3,47 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\Member;
+use App\Evaluation;
 use Illuminate;
 use App\Http\Requests;
 
 class AdminController extends Controller
 {
-    protected $lists;
-    protected $members;
-
-    public function __construct(Product $product)
-    {
-        $this->lists = $product;
-    }
 
     public function getIndex()
     {
-        $lists = Product::with('member', 'evaluation')->get();
+        $lists = Product::index();
 
-        /*
-            評価数の合計を求める
-        */
-        $sum_val[] = 0;
-
-        foreach($lists as $list){
-            $sum_val += array($list->id => 0);
-            foreach($list->evaluation as $eva){
-                $sum_val[$eva->product_id] += $eva->value;
-            }
-        }
-
-    	return view('admin.list')->with(compact('lists', 'sum_val'));
+    	return view('admin.list')->with(compact('lists'));
     }
 
     public function detail($id)
     {
-        $lists = Product::find($id);
-    	$members = Product::find($id)->member;
-        $evaluation = Product::find($id)->evaluation;
+        $product = Product::findId($id);
+    	$members = Member::findIdMembers($id);
+        $evals = Evaluation::findIdEvals($id);
 
-        /*
-            val_sum ･･･ 評価数の合計
-            age_sum ･･･ 年齢層の合計
-                0=10代, 1=20代... +1を忘れずに
-            gen_sum ･･･ 性別の合計
-        */
-        
-        $sum_val = 0;
-        $sum_age = array('0'=>0, '1'=>0, '2'=>0, '3'=>0, '4'=>0);
-        $sum_gen = array('man'=>0, 'woman'=>0);
+        $age = array("10"=>0, "20"=>0, "30"=>0, "40"=>0, "その他"=>0);
+        $gender = array("0"=>0, "1"=>0);
 
-        //それぞれの合計を求める
-        foreach($evaluation as $val){
-            $sum_val += $val->value;
-            $sum_age[$val->age_group]++;
-            if ($val->gender == 0) {
-                $sum_gen['man']++;
-            }else{
-                $sum_gen['woman']++;
+        // 評価した年齢と性別の計算
+        foreach ($evals as $key) {
+            // 年齢の合計を計算
+            if($key->age_group >= 1 && $key->age_group <= 4){
+                $age[$key->age_group*10]++;
             }
+            else
+            {
+                $age["その他"]++;
+            }
+
+            // 性別の合計を計算
+            $gender[$key->gender]++;
         }
 
-    	return view('admin.detail')->with(
-            compact('lists', 'members', 'evaluation', 'sum_val', 'sum_age', 'sum_gen'));
+    	return view('admin.detail')->with(compact(
+            'product', 'members', 'age', 'gender', 'evals'));
     }
 
     public function venue()

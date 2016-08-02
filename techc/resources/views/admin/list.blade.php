@@ -9,26 +9,18 @@
 				<thead>
 					<tr>
 						<th>作品名</th>
-						<th>作者名</th>
+						<th>代表者</th>
 						<th>評価数</th>
 						<th>詳細</th>
 					</tr>
 				</thead>
 				<tbody>
-				@foreach($lists as $list)
+				@foreach($lists as $product)
 					<tr>
-						<td>{{{ $list->product_name }}}</td>
-						<td>
-							<span>
-							@foreach($list->member as $member)
-								{{ $member->name }}
-							@endforeach
-							</span>
-						</td>
-						<td>
-							{{ $sum_val[$list->id] }}
-						</td>
-						<td><a href="./list/detail/{{ $list->id }}" class="btn btn-info">詳細</a></td>
+						<td>{{{ $product->product_name }}}</td>
+						<td>{{{ $product->delegate }}}</td>
+						<td>{{{ $product->value }}}</td>
+						<td><a href="./list/detail/{{ $product->id }}" class="btn btn-info">詳細</a></td>
 					</tr>
 				@endforeach
 				</tbody>
