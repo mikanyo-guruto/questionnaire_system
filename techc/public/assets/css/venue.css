@@ -34,6 +34,20 @@
 	margin: 0 auto;
 	width: 850px;
 }
-.list_sort ul li {
+.list h2 {
+	float: left;
+}
+.list h3 {
+	clear: both;
+}
+.list .sort li {
 	display: inline;
 }
+
+/* --- グラフ --- */
+.chartContainer {
+	height: 300px;
+	width: auto;
+}
+
+/* --- END グラフ --- */

@@ -15,7 +15,7 @@
 					<li><a href="./venue">会場アンケート</a></li>
 				</ul>
 				<ul>
-					<li><a href="#">アンケート編集</a></li>
+					<li><a href="./edit">アンケート一覧</a></li>
 				</ul>
 			</div>
 			@yield('contents')
