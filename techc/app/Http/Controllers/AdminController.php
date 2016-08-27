@@ -127,6 +127,11 @@ class AdminController extends Controller
         return view('admin.create');
     }
 
+    public function create_conf()
+    {
+        var_dump($_POST);
+    }
+
     public function edit()
     {
         // サイドバーのリンクから飛んできた場合は今の年+1の年を表示

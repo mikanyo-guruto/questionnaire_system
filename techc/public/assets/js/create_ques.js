@@ -7,6 +7,7 @@ function add_questionnaire() {
 
 	var ele = document.createElement("div");
 	ele.id = "ques" + count;
+	var div_name = "ques" + (count - 1);
 
 	/*
 		--- 要素のタグを生成 ---
@@ -27,6 +28,7 @@ function add_questionnaire() {
 	var input = document.createElement("input");
 	ques_content.appendChild(document.createTextNode("質問内容："));
 	input.setAttribute("type", "text");
+	input.name = "ques_content" + count;
 	ques_content.appendChild(input);
 	ele.appendChild(ques_content);
 
@@ -35,13 +37,14 @@ function add_questionnaire() {
 	var inp_radio1 = document.createElement("input");
 	var inp_radio2 = document.createElement("input");
 	ques_format.appendChild(document.createTextNode("解答形式："));
+
 	// 属性のフォーマット
 	inp_radio1.type = "radio";
 	inp_radio2.type = "radio";
-	inp_radio1.name = "format";
-	inp_radio2.name = "format";
-	inp_radio1.value = "radio";
-	inp_radio2.value = "text";
+	inp_radio1.name = "format" + count;
+	inp_radio2.name = "format" + count;
+	inp_radio1.value = "radio" + count;
+	inp_radio2.value = "text" + count;
 
 	ques_format.appendChild(inp_radio1);
 	ques_format.appendChild(document.createTextNode("4択"));
@@ -50,5 +53,8 @@ function add_questionnaire() {
 
 	ele.appendChild(ques_format);
 
-	document.create.appendChild(ele);
+	// 今あるアンケートの要素の次に新しく要素を追加
+	var div_content = document.getElementById(div_name);
+	//div_content.appendChild(ele);
+	div_content.parentNode.insertBefore(ele, div_content.nextSibling);
 }
