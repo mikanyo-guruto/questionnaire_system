@@ -53,9 +53,8 @@
 		</nav>
 	</header>
 	<main role="main">
-		<?php foreach ($ary as $key): ?>
-			<h1>hello</h1>
-		<?php endforeach ?>
+		@foreach($ary as $key)
+		@endforeach
 	</main>
 <!-- <footer role="contentinfo"></footer> -->
 </body>

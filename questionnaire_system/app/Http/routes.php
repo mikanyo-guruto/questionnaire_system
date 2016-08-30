@@ -63,3 +63,4 @@ Route::get('/questionnaires/questionnaire', function() {
 	return view('questionnaires/questionnaire');
 });
 
+Route::get('/questionnaires/questionnaire', 'QuestionnaireController@index');
