@@ -58,3 +58,8 @@ Route::get('/ranking/illust', function() {
 Route::get('/ranking/it', function() {
 	return view('ranking/it');
 });
+
+Route::get('/questionnaires/questionnaire', function() {
+	return view('questionnaires/questionnaire');
+});
+
