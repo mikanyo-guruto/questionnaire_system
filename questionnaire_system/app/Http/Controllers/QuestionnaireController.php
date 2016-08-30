@@ -8,7 +8,9 @@ use App\questionnaire;
 class QuestionnaireController extends Controller
 {
 	public function index () {
-		$ary = questionnaire::quesread(2017);
+		$year = date('Y');
+		$ary = questionnaire::quesread($year);
+
 		return view('questionnaires/questionnaire')->with(compact('ary'));
 	}
 }
