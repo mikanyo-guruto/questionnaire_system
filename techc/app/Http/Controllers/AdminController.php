@@ -129,7 +129,60 @@ class AdminController extends Controller
 
     public function create_conf()
     {
-        var_dump($_POST);
+        $ques = array();
+        $count = $_POST["count_ques"];
+        $date = array("start" => $_POST["start"], "finish" => $_POST["finish"]);
+
+        // postデータを二重配列に変換
+        $ques = $this->create_post_ary($ques, $_POST, $count);
+
+        return view('admin.create_conf')->with(compact('ques', 'date'));
+    }
+
+    public function create_run()
+    {
+        $ques = array();
+        $count = $_POST["count_ques"];
+        // 開催年の取得
+        $time_tmp = strtotime($_POST["start"]);
+        $year = date('Y', $time_tmp);
+        // $date = array("start" => $_POST["start"], "finish" => $_POST["finish"]);
+
+        $ques = $this->create_post_ary($ques, $_POST, $count);
+
+        // データベースへ登録
+        if(Questionnaire::createQuestionnaire($ques, $year))
+        {
+            return redirect('/list');
+        }
+        else
+        {
+            return redirect('/create');
+        }
+    }
+
+    /// postで送られたデータを配列に代入する関数
+    /*
+        [戻り値]
+        送ったpostデータを二重配列で返す
+
+        [引数]
+        1. 配列
+        2. $postデータ
+        3. 質問数
+        ※補足
+        アンケート作成･アンケート確認で使用
+    */
+    private function create_post_ary($ary, $post, $count)
+    {
+        for($i=1; $i <= $count; $i++)
+        {
+            $content = $_POST["content" . $i];
+            $format = $_POST["format" . $i];
+            $ary[$i] = array('content' => $content, 'format' => $format);
+        }
+
+        return $ary;
     }
 
     public function edit()

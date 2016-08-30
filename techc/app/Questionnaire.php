@@ -16,4 +16,22 @@ class Questionnaire extends Model
 
 		return $val;
 	}
+
+	/// 新規アンケートを登録する
+	static public function createQuestionnaire($ary, $year)
+	{
+		try
+		{
+			foreach($ary as $key) {
+				DB::table('questionnaire')->insert(
+					['content' => $key["content"], 'type' => $key["format"], 'year' => $year]
+				);
+			}
+			return true;
+		}
+		catch(\exception $e)
+		{
+			return false;
+		}
+	}
 }

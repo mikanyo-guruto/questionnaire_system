@@ -24,3 +24,5 @@ Route::get('/edit', 'AdminController@edit');
 Route::get('/create', 'AdminController@create');
 
 Route::post('/create_conf', 'AdminController@create_conf');
+
+Route::post('/create_run', 'AdminController@create_run');

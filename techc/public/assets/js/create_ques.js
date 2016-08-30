@@ -28,7 +28,8 @@ function add_questionnaire() {
 	var input = document.createElement("input");
 	ques_content.appendChild(document.createTextNode("質問内容："));
 	input.setAttribute("type", "text");
-	input.name = "ques_content" + count;
+	input.setAttribute("required", "required");
+	input.name = "content" + count;
 	ques_content.appendChild(input);
 	ele.appendChild(ques_content);
 
@@ -43,8 +44,10 @@ function add_questionnaire() {
 	inp_radio2.type = "radio";
 	inp_radio1.name = "format" + count;
 	inp_radio2.name = "format" + count;
-	inp_radio1.value = "radio" + count;
-	inp_radio2.value = "text" + count;
+	inp_radio1.value = "radio";
+	inp_radio2.value = "text";
+	inp_radio1.setAttribute("required", "required");
+	inp_radio2.setAttribute("required", "required");
 
 	ques_format.appendChild(inp_radio1);
 	ques_format.appendChild(document.createTextNode("4択"));
@@ -52,6 +55,9 @@ function add_questionnaire() {
 	ques_format.appendChild(document.createTextNode("記述"));
 
 	ele.appendChild(ques_format);
+
+	// 質問数をhidden要素の値に代入
+	document.create.count_ques.value = count;
 
 	// 今あるアンケートの要素の次に新しく要素を追加
 	var div_content = document.getElementById(div_name);
