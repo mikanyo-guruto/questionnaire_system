@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use DB;
 
-class questionnaire extends Model
+class Questionnaire extends Model
 {
 	static public function quesread ($year) {
 		$val = DB::table('questionnaire')

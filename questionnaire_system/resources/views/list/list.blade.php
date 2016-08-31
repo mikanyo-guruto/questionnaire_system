@@ -2,14 +2,14 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>サイトタイトル</title>
+<title>イラストワールド</title>
 
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <meta name="format-detection" content="telephone=no,email=no">
 
-<link rel="stylesheet" href="../../../assets/style/normalize.css">
-<link rel="stylesheet" href="../../../assets/style/style.css">
+<link rel="stylesheet" href="../assets/style/normalize.css">
+<link rel="stylesheet" href="../assets/style/style.css">
 
 <meta name="description" content="サイトの説明文">
 <meta name="keywords" content="カンマで区切ってキーワード">
@@ -23,7 +23,7 @@
 <![endif]-->
 <!--[if gt IE 9]><!-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="../../../assets/script/script.js"></script>
+<script type="text/javascript" src="../assets/script/script.js"></script>
 <!--<![endif]-->
 <!-- drawer.css -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/css/drawer.min.css">
@@ -33,10 +33,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/js/drawer.min.js"></script>
 </head>
 
-<body class="drawer drawer--right notop illust">
+<body class="drawer drawer--right notop world illust">
 	<header role="banner">
-		<h1><a href="../index.html"><img src="../../../assets/images/techlogo.png" alt=""></a></h1>
-		<h2>イラストワールド</h2>
+		<h1><a href="/"><img src="../assets/images/techlogo.png" alt=""></a></h1>
+		<h2>
+			@if($genre=="illust")
+				イラスト
+			@elseif($genre=="game")
+				ゲーム
+			@elseif($genre=="it")
+				IT
+			@endif
+			ワールド
+		</h2>
 		<button type="button" class="drawer-toggle drawer-hamburger">
 			<span class="sr-only">toggle navigation</span>
 			<span class="drawer-hamburger-icon"></span>
@@ -48,27 +57,28 @@
 				<li><a class="drawer-menu-item" href="/list/game">Gameワールド</a></li>
 				<li><a class="drawer-menu-item" href="/list/illust">Illustワールド</a></li>
 				<li><a class="drawer-menu-item" href="/list/it">ITワールド</a></li>
-				<li><a class="drawer-menu-item" href="/ranking/index">ランキング</a></li>
+				<li><a class="drawer-menu-item" href="/ranking/index">ランキング</a></li>	
 			</ul>
 		</nav>
 	</header>
 	<main role="main">
-		<div class="workdetail">
-			<img src="../../../assets/images/damy.png" alt="">
+		<div class="work">
 			<ul>
-				<li class="afcf"><p>作品名</p><p>叫び</p></li>
-				<li class="afcf"><p>製作者</p><p>ムンク</p></li>
-				<li class="afcf"><p>制作期間</p><p>1年</p></li>
-				<li class="afcf detail"><p>詳細</p>
-				<p>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p></li>
+				@if(!empty($ary))
+					@foreach($ary as $key)
+						<li>
+							<a href="/list/detail/{{$key->id}}">
+							<img src="../assets/{{$key->img}}" alt="">
+							<p>作品名:{{$key->product_name}}<br>代表者:{{$key->delegate}}</p>
+							</a>
+							<a href="#"><img src="../assets/images/box.png" alt=""></a>
+						</li>
+					@endforeach
+				@else
+					<p>作品がまだ登録されていません</p>
+				@endif
 			</ul>
-
-			<div class="box">
-				<h3>投票お願いします</h3>
-				<img src="../../../assets/images/box.png" alt="">
-				<a href="/questionnaires/questionnaire"><p>投票する</p></a>
-			</div>
-		</div>
+	</div>
 	</main>
 <!-- <footer role="contentinfo"></footer> -->
 </body>

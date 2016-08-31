@@ -15,29 +15,11 @@ Route::get('/', function() {
     return view('index');
 });
 
-Route::get('/list/game', function() {
-	return view('list/game');
-});
+Route::get('/list/{genre}', 'ProductController@genre');
 
-Route::get('/list/detail/game', function() {
-	return view('list/detail/game');
-});
+Route::get('/questionnaires/questionnaire', 'QuestionnaireController@index');
 
-Route::get('/list/illust', function() {
-	return view('list/illust');
-});
-
-Route::get('/list/detail/illust', function() {
-	return view('list/detail/illust');
-});
-
-Route::get('/list/it', function() {
-	return view('list/it');
-});
-
-Route::get('/list/detail/it', function() {
-	return view('list/detail/it');
-});
+Route::get('/list/detail/{id}', 'Product_detailController@index');
 
 Route::get('/ranking/index', function() {
 	return view('ranking/index');
@@ -62,5 +44,3 @@ Route::get('/ranking/it', function() {
 Route::get('/questionnaires/questionnaire', function() {
 	return view('questionnaires/questionnaire');
 });
-
-Route::get('/questionnaires/questionnaire', 'QuestionnaireController@index');
