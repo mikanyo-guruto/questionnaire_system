@@ -73,7 +73,7 @@
 		</div>
 		<div class="question">
 			<h2>会場アンケートにご協力お願いします</h2>
-			<a href="#"><p>会場アンケート</p></a>
+			<a href="questionnaires/questionnaire"><p>会場アンケート</p></a>
 		</div>
 	</main>
 <!-- <footer role="contentinfo"></footer> -->

@@ -2,7 +2,16 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>イラストワールド</title>
+<title>
+	@if($genre=="illust")
+		イラスト
+	@elseif($genre=="game")
+		ゲーム
+	@elseif($genre=="it")
+		IT
+	@endif
+	ワールド
+</title>
 
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -71,7 +80,7 @@
 							<img src="../assets/{{$key->img}}" alt="">
 							<p>作品名:{{$key->product_name}}<br>代表者:{{$key->delegate}}</p>
 							</a>
-							<a href="#"><img src="../assets/images/box.png" alt=""></a>
+							<a href="/questionnaire"><img src="../assets/images/box.png" alt=""></a>
 						</li>
 					@endforeach
 				@else
