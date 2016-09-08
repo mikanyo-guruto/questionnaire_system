@@ -11,18 +11,18 @@
 |
 */
 
-Route::get('/list', 'AdminController@getIndex');
+Route::get('admin/list', 'AdminController@getIndex');
 
-Route::get('/list/detail/{id}', 'AdminController@detail');
+Route::get('admin/list/detail/{id}', 'AdminController@detail');
 
-Route::get('/venue', 'AdminController@venue');
+Route::get('admin/venue', 'AdminController@venue');
 
-Route::get('/venue/venue_detail', 'AdminController@venue_detail');
+Route::get('admin/venue/venue_detail', 'AdminController@venue_detail');
 
-Route::get('/edit', 'AdminController@edit');
+Route::get('admin/edit', 'AdminController@edit');
 
-Route::get('/create', 'AdminController@create');
+Route::get('admin/create', 'AdminController@create');
 
-Route::post('/create_conf', 'AdminController@create_conf');
+Route::post('admin/create_conf', 'AdminController@create_conf');
 
-Route::post('/create_run', 'AdminController@create_run');
+Route::post('admin/create_run', 'AdminController@create_run');
