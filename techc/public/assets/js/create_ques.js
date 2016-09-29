@@ -2,8 +2,6 @@ var count = 1;
 
 /// アンケート作成時、質問を増やす際の関数
 function add_questionnaire() {
-	// 要素数をインクリメント
-	count++;
 
 	var ele = document.createElement("div");
 	ele.id = "ques" + count;
@@ -56,11 +54,13 @@ function add_questionnaire() {
 
 	ele.appendChild(ques_format);
 
-	// 質問数をhidden要素の値に代入
-	document.create.count_ques.value = count;
+	// count_ques(質問数)をインクリメント
+	document.getElementById('count').value = count;
 
 	// 今あるアンケートの要素の次に新しく要素を追加
 	var div_content = document.getElementById(div_name);
-	//div_content.appendChild(ele);
 	div_content.parentNode.insertBefore(ele, div_content.nextSibling);
+
+	// 要素数をインクリメント
+	count++;	
 }
