@@ -141,23 +141,41 @@ class AdminController extends Controller
 
     public function create_run()
     {
-        $ques = array();
-        $count = $_POST["count_ques"];
-        // 開催年の取得
-        $time_tmp = strtotime($_POST["start"]);
-        $year = date('Y', $time_tmp);
-        // $date = array("start" => $_POST["start"], "finish" => $_POST["finish"]);
-
-        $ques = $this->create_post_ary($ques, $_POST, $count);
-
-        // データベースへ登録
-        if(Questionnaire::createQuestionnaire($ques, $year))
+        // バックなら値を保持しcreateへリダイレクト
+        if($_POST['action'] === "back")
         {
-            return redirect('/list');
+            $ques = $_POST;
+
+            // csrfとactionステータスの削除
+            unset($ques['_token']);
+            unset($ques['action']);
+
+            return view('admin.create')->with(compact('ques'));
         }
-        else
+        // runならDBへ登録
+        elseif($_POST['action'] === "run")
         {
-            return redirect('/create');
+            $ques = array();
+            $count = $_POST["count_ques"];
+            // 開催年の取得
+            $time_tmp = strtotime($_POST["start"]);
+            $year = date('Y', $time_tmp);
+            // $date = array("start" => $_POST["start"], "finish" => $_POST["finish"]);
+
+            // 配列に格納
+            $ques = $this->create_post_ary($ques, $_POST, $count);
+var_dump($ques);
+exit;
+
+            // データベースへ登録
+            if(Questionnaire::createQuestionnaire($ques, $year))
+            {
+                return redirect('/list');
+            }
+            else
+            {
+                return redirect('/create');
+            }
         }
     }
 

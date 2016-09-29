@@ -32,7 +32,10 @@
 				<input type="hidden" name="finish" value="<?php echo $date["finish"]; ?>">
 				<input type="hidden" name="count_ques" value="<?php echo $i-1; ?>">
 				<input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
-				<input type="submit" class="btn btn-success create_ques" value="作成">
+				<button type="submit" name="action" class="btn btn-success create_ques" value="run">作成</button>
+				<button type="submit" name="action" class="btn btn-default create_ques" value="back">作成</button>
 			</form>
+
+
 		</div>
 	@stop
