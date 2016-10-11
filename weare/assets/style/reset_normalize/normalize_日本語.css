@@ -1,0 +1,411 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+ 
+/**
+ * 1. デフォルトのフォントファミリーは「sans-serif」をセット。
+ * 2. iOSとIEにおけるデバイスの向きを変えた後にユーザーが文字サイズ調整を防ぐ。
+ */
+ 
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+ 
+/**
+ * デフォルトのマージンを取り除く。
+ */
+ 
+body {
+  margin: 0;
+}
+
+/* HTML5の新要素用の定義
+   ========================================================================== */
+ 
+/**
+ * IE8/9用、いくつかのHTML5の要素に「block」を定義。
+ * IE10/11とFirefox用、「details」と「summary」に「block」を定義。
+ * IE11用、「main」に「block」を定義。
+ */
+ 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+ 
+/**
+ * 1. IE8/9用、「inline-block」を定義。
+ * 2. Chrome, Firefox, Opera用、「progress」の縦方向の揃えを正常化。
+ */
+ 
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+ 
+/**
+ * モダンブラウザで再生用のコントロールがない「audio」は阻止。
+ * iOS 5のデバイスでは超過の高さを取り除く。
+ */
+ 
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+ 
+/**
+ * IE8/9/10用、「[hidden]」は非表示を設定。
+ * IE8/9/10/11, Safari, Firefox <22用、「template」要素は隠す。
+ */
+ 
+[hidden],
+template {
+  display: none;
+}
+
+/* リンク系の定義
+   ========================================================================== */
+ 
+/**
+ * IE10用、アクティブリンクから背景がグレーになるのを取り除く。
+ */
+ 
+a {
+  background-color: transparent;
+}
+ 
+/**
+ * リンクのアクティブ・ホバー時にフォーカスした要素のリーダビリティを改善するためにアウトラインを取り除く。
+ */
+ 
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* テキスト系の定義
+   ========================================================================== */
+ 
+/** 
+ * IE8/9/10/11, Safari, Chrome用、title属性を使用した「abbr」要素に点線を設定。
+ */
+ 
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+ 
+/**
+ * Firefox 4+, Sarafi, Chrome用、「strong」要素のフォントウェイトにボールドを設定。
+ */
+ 
+b,
+strong {
+  font-weight: bold;
+}
+ 
+/**
+ * Safari, Chrome用、「dfn」要素にイタリックを設定。
+ */
+ 
+dfn {
+  font-style: italic;
+}
+ 
+/**
+ * Firefox 4+, Safari, Chrome用、h1要素のフォントサイズとマージンを設定。
+ */
+ 
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+ 
+/**
+ * IE8/9用、mark要素を設定。
+ */
+ 
+mark {
+  background: #ff0;
+  color: #000;
+}
+ 
+/**
+ * 全てのブラウザ用、small要素でも文字の可読性を確保。
+ */
+ 
+small {
+  font-size: 80%;
+}
+ 
+/**
+ * 全てのブラウザ用、sub, supが「line-height」に影響を与えるのを妨げる。
+ */
+ 
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+ 
+sup {
+  top: -0.5em;
+}
+ 
+sub {
+  bottom: -0.25em;
+}
+
+/* 埋め込みコンテンツ系の定義
+   ========================================================================== */
+ 
+/**
+ * IE8/9/10用、img要素がa要素の中にある時にボーダーを取り除く。
+ */
+ 
+img {
+  border: 0;
+}
+ 
+/**
+ * IE9/10/11用、svg要素に「overflow: hidden;」を修正。
+ */
+ 
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* グルーピングコンテンツ系の定義
+   ========================================================================== */
+ 
+/**
+ * IE8/9とSafari用、figure要素にマージンを設定。
+ */
+ 
+figure {
+  margin: 1em 40px;
+}
+ 
+/**
+ * Firefoxと他のブラウザ間で異なるので、hr要素に設定。
+ */
+ 
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+ 
+/**
+ * 全てのブラウザ用、pre要素に「overflow: auto;」を設定。
+ */
+ 
+pre {
+  overflow: auto;
+}
+ 
+/**
+ * 全てのブラウザ用、フォントサイズのレンダリングを設定。
+ */
+ 
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* フォーム系の定義
+   ========================================================================== */
+ 
+/**
+ * 周知の限界：デフォルトでOS XのChrome, Safariは、select要素のスタイルを非常に限定します、borderプロパティのセットをしない限り。
+ */
+ 
+/**
+ * 1. カラーが継承されないので、修正。
+ * 2. フォントのプロパティが継承されないので、修正。
+ * 3. Firefox 4+, Safari, Chrome用、マージンが異なるので設定。
+ */
+ 
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+ 
+/**
+ * IE8/9/10/11用、button要素に「overflow: visible; 」を設定。
+ */
+ 
+button {
+  overflow: visible;
+}
+ 
+/**
+ * button要素とselect要素に「text-transform」を設定。
+ * 他の全てのフォーム コントロール要素は「text-transform」の値を継承しません。
+ * Firefox, IE8/9/10/11, Opera用、button要素に継承のスタイルを修正。
+ * Firefox用、select要素に継承のスタイルを修正。
+ */
+ 
+button,
+select {
+  text-transform: none;
+}
+ 
+/**
+ * 1. Android 4.0.*用、ネイティブのaudio要素とvideo要素のコントールのWebkitのバグを避ける。
+ * 2. iOS用、クリッカブルなinput要素のtypeのスタイルを修正。
+ * 3. 画像を使用したinput要素にはユーザビリティのためにカーソルをポインターに改善。
+ */
+ 
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+ 
+/**
+ * disabledを指定した使用不可の要素にはカーソルをデフォルトにリセット。
+ */
+ 
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+ 
+/**
+ * Firefox 4+用、button要素とinput要素の内側のパディングを取り除く。
+ */
+ 
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+ 
+/**
+ * Firefox 4+用、ブラウザに設定されているUAスタイルシートで設定されている「!important」を使った「line-height」を設定。
+ */
+ 
+input {
+  line-height: normal;
+}
+ 
+/**
+ * これらの要素のスタイルは試さないことを勧めます。
+ * Firefoxの実装では、box-sizing, padding, widthを尊重しません。
+ 
+ * 1. IE8/9/10用、box-sizingに「content-box」を設定。
+ * 2. IE8/9/10用、余分なパディングを取り除く。
+ */
+ 
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+ 
+/**
+ * Chrome用、数値を増減させるinput要素はfont-sizeをある特定の値にするとカーソルのスタイルがデフォルトからテキストに変化してしまうのを修正。
+ */
+ 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+ 
+/**
+ * 1. Safari, Chrome用、検索フィールドのアピアランスを設定。
+ * 2. Safari, Chrome用、box-sizingにはborder-boxを設定。
+ */
+ 
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  box-sizing: content-box; /* 2 */
+}
+ 
+/**
+ * OS XのSarai, Chrome用、検索フィールドのキャンセルボタンの内側のパディングを取り除く。
+ * Safari用（Chromeではない）、検索フィールドの左にできてしまうパディングを切り取る。
+ */
+ 
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+ 
+/**
+ * fieldset要素のborder, margin, paddingを同じスタイルで定義。
+ */
+ 
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+ 
+/**
+ * 1. IE8/9/10/11用、カラーが継承されないのを修正。
+ * 2. 外側のfieldsetをゼロにした際のpaddingを取り除く
+ */
+ 
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+ 
+/**
+ * IE8/9/10/11用、デフォルトの垂直方向のスクロールバーを取り除く
+ */
+ 
+textarea {
+  overflow: auto;
+}
+ 
+/**
+ * font-weightの継承をしない。
+ * メモ: OS XのChrome, Safariでは、デフォルトを安全に変更することができません。
+ */
+ 
+optgroup {
+  font-weight: bold;
+}
+/* テーブル系の定義
+   ========================================================================== */
+ 
+/**
+ * テーブルのセル間のスペースを取り除く。
+ */
+ 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ 
+td,
+th {
+  padding: 0;
+}
