@@ -11,12 +11,36 @@
 |
 */
 
-Route::get('/list', 'AdminController@getIndex');
+Route::get('/', function() {
+    return view('index');
+});
 
-Route::get('/list/detail/{id}', 'AdminController@detail');
+Route::get('/list/{genre}', 'ProductController@genre');
 
-Route::get('/venue', 'AdminController@venue');
+Route::get('/questionnaires/questionnaire', 'QuestionnaireController@index');
 
-Route::get('/venue/venue_detail', 'AdminController@venue_detail');
+Route::get('/list/detail/{id}', 'Product_detailController@index');
 
-Route::get('/questionnaire_edit', 'AdminController@questionnaire_edit');
+Route::get('/ranking/index', function() {
+	return view('ranking/index');
+});
+
+Route::get('/ranking/all', function() {
+	return view('ranking/all');
+});
+
+Route::get('/ranking/game', function() {
+	return view('ranking/game');
+});
+
+Route::get('/ranking/illust', function() {
+	return view('ranking/illust');
+});
+
+Route::get('/ranking/it', function() {
+	return view('ranking/it');
+});
+
+Route::get('/questionnaire', function() {
+	return redirect('questionnaires/questionnaire');
+});

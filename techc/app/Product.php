@@ -4,17 +4,30 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+use DB;
+
 class Product extends Model
 {
-	protected $table = 'products';
+    static public function index () {
+    	$val = DB::table('products')
+    		->get();
+    	
+    	return $val;
+    }
 
-	public function member()
-	{
-		return $this->hasMany('App\Member');
-	}
+    static public function detail ($id) {
+    	$val = DB::table('products')
+            ->where('id',$id)
+    		->get();
+            
+    	return $val;
+    }
 
-    public function evaluation()
-    {
-    	return $this->hasMany('App\Evaluation');
+    static public function genre ($genre) {
+        $val = DB::table('products')
+            ->where('genre',$genre)
+            ->get();
+
+        return $val;
     }
 }
