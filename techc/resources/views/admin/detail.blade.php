@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <link href="{{{asset('/assets/css/bootstrap.min.css')}}}" rel="stylesheet">
-<link href="{{{asset('/assets/css/detail.css')}}}" rel="stylesheet">
+<link href="{{{asset('/assets/css/admin/detail.css')}}}" rel="stylesheet">
 </head>
 <body>
 <div class="wrap">

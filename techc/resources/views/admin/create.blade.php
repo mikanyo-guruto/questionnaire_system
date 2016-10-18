@@ -1,7 +1,7 @@
 @extends('common.master')
 	@section('addCss')
-		<link href="{{{asset('/assets/css/list.css')}}}" rel="stylesheet">
-		<link href="{{{asset('/assets/css/create.css')}}}" rel="stylesheet">
+		<link href="{{{asset('/assets/css/admin/list.css')}}}" rel="stylesheet">
+		<link href="{{{asset('/assets/css/admin/create.css')}}}" rel="stylesheet">
 
 		<script type="text/javascript" src="{{{asset('/assets/js/create_ques.js')}}}"></script>
 	@stop

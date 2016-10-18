@@ -1,7 +1,7 @@
 @extends('common.master')
 	@section('addCss')
-		<link href="{{{asset('/assets/css/list.css')}}}" rel="stylesheet">
-		<link href="{{{asset('/assets/css/edit.css')}}}" rel="stylesheet">
+		<link href="{{{asset('/assets/css/admin/list.css')}}}" rel="stylesheet">
+		<link href="{{{asset('/assets/css/admin/edit.css')}}}" rel="stylesheet">
 	@stop
 	@section('contents')
 		<div class="list">

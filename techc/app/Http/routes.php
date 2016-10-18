@@ -11,7 +11,6 @@
 |
 */
 
-<<<<<<< HEAD
 Route::get('/', function() {
     return view('index');
 });
@@ -45,7 +44,8 @@ Route::get('/ranking/it', function() {
 Route::get('/questionnaire', function() {
 	return redirect('questionnaires/questionnaire');
 });
-=======
+
+// adminルーティング
 Route::get('admin/list', 'AdminController@getIndex');
 
 Route::get('admin/list/detail/{id}', 'AdminController@detail');
@@ -61,4 +61,3 @@ Route::get('admin/create', 'AdminController@create');
 Route::post('admin/create_conf', 'AdminController@create_conf');
 
 Route::post('admin/create_run', 'AdminController@create_run');
->>>>>>> origin/admin
