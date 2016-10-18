@@ -1,7 +1,7 @@
-@extends('common.master')
+@extends('admin/common.master')
 	@section('addCss')
 		<link href="{{{asset('/assets/css/admin/venue.css')}}}" rel="stylesheet">
-		<script type="text/javascript" src="{{{asset('/assets/js/canvasjs.min.js')}}}"></script>
+		<script type="text/javascript" src="{{{asset('/assets/js/admin/canvasjs.min.js')}}}"></script>
 		<script type="text/javascript">
 		function bar_graph(id, ary)
 		{
@@ -9,7 +9,7 @@
 			var chart = new CanvasJS.Chart("chartContainer" + id, {
 				data: [{
 					type: 'column',
-					dataPoints: ary		
+					dataPoints: ary	
 				}]
 			});
 			chart.render();

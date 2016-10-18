@@ -1,4 +1,4 @@
-@extends('common.master')
+@extends('admin/common.master')
 	@section('addCss')
 		<link href="{{{asset('/assets/css/admin/list.css')}}}" rel="stylesheet">
 	@stop
