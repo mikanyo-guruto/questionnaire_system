@@ -17,8 +17,8 @@
 
 <meta name="format-detection" content="telephone=no,email=no">
 
-<link rel="stylesheet" href="../assets/style/normalize.css">
-<link rel="stylesheet" href="../assets/style/style.css">
+<link rel="stylesheet" href="{{{asset('assets/css/user/normalize.css')}}}">
+<link rel="stylesheet" href="{{{asset('assets/css/user/style.css')}}}">
 
 <meta name="description" content="サイトの説明文">
 <meta name="keywords" content="カンマで区切ってキーワード">
@@ -32,7 +32,7 @@
 <![endif]-->
 <!--[if gt IE 9]><!-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="../assets/script/script.js"></script>
+<script type="text/javascript" src="{{{asset('assets/js/user/script.js')}}}"></script>
 <!--<![endif]-->
 <!-- drawer.css -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/css/drawer.min.css">

@@ -9,8 +9,8 @@ class QuestionnaireController extends Controller
 {
 	public function index () {
 		$year = date('Y');
-		$ary = questionnaire::quesread($year);
-
-		return view('questionnaires/questionnaire')->with(compact('ary'));
+		$ary = Questionnaire::findYear($year);
+		
+		return view('user/questionnaires/questionnaire')->with(compact('ary'));
 	}
 }
