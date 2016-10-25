@@ -44,10 +44,10 @@
 			<ul class="drawer-menu">
 				<li class="drawer-brand">Menu</li>
 				<li><a class="drawer-menu-item" href="/">Top</a></li>
-				<li><a class="drawer-menu-item" href="/list/game">Gameワールド</a></li>
-				<li><a class="drawer-menu-item" href="/list/illust">Illustワールド</a></li>
-				<li><a class="drawer-menu-item" href="/list/it">ITワールド</a></li>
-				<li><a class="drawer-menu-item" href="/ranking/index">ランキング</a></li>
+				<li><a class="drawer-menu-item" href="/user/list/game">Gameワールド</a></li>
+				<li><a class="drawer-menu-item" href="/user/list/illust">Illustワールド</a></li>
+				<li><a class="drawer-menu-item" href="/user/list/it">ITワールド</a></li>
+				<li><a class="drawer-menu-item" href="/user/ranking/index">ランキング</a></li>
 		</nav>
 	</header>
 	<main role="main">
@@ -66,14 +66,14 @@
 				<li class="it"><a href="world/it.html">IT</a></li>
 			</ul> -->
 			<ul>
-				<li class="game"><a href="list/game"><img src="./assets/images/game.png" alt="ゲーム"></a></li>
-				<li class="illust"><a href="list/illust"><img src="assets/images/illust.png" alt="イラスト"></a></li>
-				<li class="it"><a href="list/it"><img src="assets/images/it.png" alt="IT"></a></li>
+				<li class="game"><a href="user/list/game"><img src="./assets/images/game.png" alt="ゲーム"></a></li>
+				<li class="illust"><a href="user/list/illust"><img src="./assets/images/illust.png" alt="イラスト"></a></li>
+				<li class="it"><a href="user/list/it"><img src="./assets/images/it.png" alt="IT"></a></li>
 			</ul>
 		</div>
 		<div class="question">
 			<h2>会場アンケートにご協力お願いします</h2>
-			<a href="questionnaires"><p>会場アンケート</p></a>
+			<a href="user/questionnaires"><p>会場アンケート</p></a>
 		</div>
 	</main>
 <!-- <footer role="contentinfo"></footer> -->

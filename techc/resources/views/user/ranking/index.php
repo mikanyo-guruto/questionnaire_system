@@ -8,8 +8,8 @@
 
 <meta name="format-detection" content="telephone=no,email=no">
 
-<link rel="stylesheet" href="../assets/style/normalize.css">
-<link rel="stylesheet" href="../assets/style/style.css">
+<link rel="stylesheet" href="assets/css/user/normalize.css">
+<link rel="stylesheet" href="assets/css/user/style.css">
 
 <meta name="description" content="サイトの説明文">
 <meta name="keywords" content="カンマで区切ってキーワード">

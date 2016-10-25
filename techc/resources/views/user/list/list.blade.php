@@ -44,7 +44,7 @@
 
 <body class="drawer drawer--right notop world illust">
 	<header role="banner">
-		<h1><a href="/"><img src="../assets/images/techlogo.png" alt=""></a></h1>
+		<h1><a href="/"><img src="../../assets/images/techlogo.png" alt=""></a></h1>
 		<h2>
 			@if($genre=="illust")
 				イラスト
@@ -63,10 +63,10 @@
 			<ul class="drawer-menu">
 				<li class="drawer-brand">Menu</li>
 				<li><a class="drawer-menu-item" href="/">Top</a></li>
-				<li><a class="drawer-menu-item" href="/list/game">Gameワールド</a></li>
-				<li><a class="drawer-menu-item" href="/list/illust">Illustワールド</a></li>
-				<li><a class="drawer-menu-item" href="/list/it">ITワールド</a></li>
-				<li><a class="drawer-menu-item" href="/ranking/index">ランキング</a></li>	
+				<li><a class="drawer-menu-item" href="/user/list/game">Gameワールド</a></li>
+				<li><a class="drawer-menu-item" href="/user/list/illust">Illustワールド</a></li>
+				<li><a class="drawer-menu-item" href="/user/list/it">ITワールド</a></li>
+				<li><a class="drawer-menu-item" href="/user/ranking/index">ランキング</a></li>	
 			</ul>
 		</nav>
 	</header>
@@ -76,11 +76,11 @@
 				@if(!empty($ary))
 					@foreach($ary as $key)
 						<li>
-							<a href="/list/detail/{{$key->id}}">
-							<img src="../assets/{{$key->img}}" alt="">
+							<a href="detail/{{$key->id}}">
+							<img src="../../assets/{{$key->img}}" alt="">
 							<p>作品名:{{$key->product_name}}<br>代表者:{{$key->delegate}}</p>
 							</a>
-							<a href="/questionnaire"><img src="../assets/images/box.png" alt=""></a>
+							<a href="user/questionnaire"><img src="../../assets/images/box.png" alt=""></a>
 						</li>
 					@endforeach
 				@else

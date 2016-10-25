@@ -15,34 +15,34 @@ Route::get('/', function() {
     return view('index');
 });
 
-Route::get('/list/{genre}', 'ProductController@genre');
+Route::get('user/list/{genre}', 'ProductController@genre');
 
-Route::get('/questionnaires', 'QuestionnaireController@index');
+Route::get('user/questionnaires', 'QuestionnaireController@index');
 
-Route::get('/list/detail/{id}', 'Product_detailController@index');
+Route::get('user/list/detail/{id}', 'Product_detailController@index');
 
-Route::get('/ranking/index', function() {
-	return view('ranking/index');
+Route::get('user/ranking/index', function() {
+	return view('user/ranking/index');
 });
 
-Route::get('/ranking/all', function() {
-	return view('ranking/all');
+Route::get('user/ranking/all', function() {
+	return view('userranking/all');
 });
 
-Route::get('/ranking/game', function() {
-	return view('ranking/game');
+Route::get('user/ranking/game', function() {
+	return view('user/ranking/game');
 });
 
-Route::get('/ranking/illust', function() {
-	return view('ranking/illust');
+Route::get('user/ranking/illust', function() {
+	return view('user/ranking/illust');
 });
 
-Route::get('/ranking/it', function() {
-	return view('ranking/it');
+Route::get('user/ranking/it', function() {
+	return view('user/ranking/it');
 });
 
-Route::get('/questionnaire', function() {
-	return redirect('questionnaires/questionnaire');
+Route::get('user/questionnaire', function() {
+	return redirect('user/questionnaires/questionnaire');
 });
 
 // adminルーティング

@@ -8,9 +8,9 @@ use App\Product;
 class Product_detailController extends Controller
 {
 	public function index ($id) {
-		$ary = Product::detail($id);
-		$genre = $ary[0]->genre;
 
-		return view('/list/detail')->with(compact('ary' , 'genre'));
+		$ary = Product::findid($id);
+		$genre = $ary->genre;
+		return view('user/list/detail')->with(compact('ary','genre'));
 	}
 }

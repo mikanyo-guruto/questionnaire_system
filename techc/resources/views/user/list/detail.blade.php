@@ -8,8 +8,8 @@
 
 <meta name="format-detection" content="telephone=no,email=no">
 
-<link rel="stylesheet" href="../../../assets/style/normalize.css">
-<link rel="stylesheet" href="../../../assets/style/style.css">
+<link rel="stylesheet" href="{{{asset('assets/css/user/normalize.css')}}}">
+<link rel="stylesheet" href="{{{asset('assets/css/user/style.css')}}}">
 
 <meta name="description" content="サイトの説明文">
 <meta name="keywords" content="カンマで区切ってキーワード">
@@ -54,22 +54,22 @@
 			<ul class="drawer-menu">
 				<li class="drawer-brand">Menu</li>
 				<li><a class="drawer-menu-item" href="/">Top</a></li>
-				<li><a class="drawer-menu-item" href="/list/game">Gameワールド</a></li>
-				<li><a class="drawer-menu-item" href="/list/illust">Illustワールド</a></li>
-				<li><a class="drawer-menu-item" href="/list/it">ITワールド</a></li>
-				<li><a class="drawer-menu-item" href="/ranking/index">ランキング</a></li>
+				<li><a class="drawer-menu-item" href="/user/list/game">Gameワールド</a></li>
+				<li><a class="drawer-menu-item" href="/user/list/illust">Illustワールド</a></li>
+				<li><a class="drawer-menu-item" href="/user/list/it">ITワールド</a></li>
+				<li><a class="drawer-menu-item" href="/user/ranking/index">ランキング</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main role="main">
 		<div class="workdetail">
 			@if(!empty($ary))
-				<img src="../../../assets/{{$ary[0]->img}}" alt="">
+				<img src="../../../assets/{{$ary->img}}" alt="">
 				<ul>
-					<li class="afcf"><p>作品名</p><p>{{$ary[0]->product_name}}</p></li>
-					<li class="afcf"><p>製作者</p><p>{{$ary[0]->delegate}}</p></li>
-					<li class="afcf"><p>制作期間</p><p>{{$ary[0]->period}}</p></li>
-					<li class="afcf detail"><p>詳細</p><p>{{$ary[0]->overview}}</p></li>
+					<li class="afcf"><p>作品名</p><p>{{$ary->product_name}}</p></li>
+					<li class="afcf"><p>製作者</p><p>{{$ary->delegate}}</p></li>
+					<li class="afcf"><p>制作期間</p><p>{{$ary->period}}</p></li>
+					<li class="afcf detail"><p>詳細</p><p>{{$ary->overview}}</p></li>
 				</ul>
 			@else
 					<p>作品がまだ登録されていません</p>
@@ -78,7 +78,7 @@
 			<div class="box">
 				<h3>投票お願いします</h3>
 				<img src="../../../assets/images/box.png" alt="">
-				<a href="/questionnaires/questionnaire"><p>投票する</p></a>
+				<a href="/user/questionnaires/questionnaire"><p>投票する</p></a>
 			</div>
 		</div>
 	</main>
