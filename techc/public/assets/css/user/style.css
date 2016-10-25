@@ -39,9 +39,39 @@ header ul li a{display: block;}
 	font-size: 28px;
 }
 
+/*menumenumenumenumenumenumenumenumenumenumenumenumenumenumenumenumenumenumenumenumenumenumenu*/
+.drawer-brand{
+	padding-left: 10px;
+	padding-top: 30px;
+	background-color: #020202;
+	color: #fdfdfd;
+}
+
+ul.drawer-menu{
+	background-color: #fefefe;
+	height: 100%;
+	list-style-type: circle; 
+}
+.drawer-menu li a:after{
+	content: ">";
+	position: absolute;
+	right: 12px;
+	bottom: 12px;
+	font-size: 24px;
+}
+.drawer-menu li{
+	padding: 5px 0 5px 12px;
+	position: relative;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+
+/*menu end*/
+
 /*toptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptoptop*/
 .top{
-	background-image: url("../images/topbg.png");
+	background-image: url("../../images/topbg.png");
 	-webkit-background-size: contain;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -86,6 +116,7 @@ header ul li a{display: block;}
 	margin-left: 7%;}
 .top .contents ul li a img{
 	width: 100%;
+	border-radius: 15px;
 }
 /*.top .contents ul li a{
 	display: block;
@@ -124,7 +155,7 @@ header ul li a{display: block;}
 .top .question h2{
 	font-size: 18px;
 	margin-bottom: 20px;}
-.top .question a p{
+/*.top .question a p{
 	margin-top: -15px;
 	margin-bottom: 30px;
 	font-size: 18px;
@@ -132,7 +163,11 @@ header ul li a{display: block;}
 	margin-left: 5%;
 	padding: 10px 0;
 	border-radius: 15px;
-	background-color: #E95377;}
+	background-color: #E95377;}*/
+	.top .question a p img{
+	width: 90%;
+	margin-top: -15px;
+	border-radius: 15px}
 /*top end*/
 
 /*world world world world world world world world world world world world world world world world world world world world world world world */
@@ -191,6 +226,7 @@ main .work ul li a img:last-child{
 }
 .workdetail ul li.detail p:first-child{
 	width: 100%;
+	height: 100%;	
 	text-align: center;
 	background-color: pink;
 	border-bottom: none;
@@ -206,7 +242,7 @@ main .work ul li a img:last-child{
 
 .workdetail .box h3{text-align: center;margin: 30px 0 -40px 0;padding: 0;}
 .workdetail .box img{width: 50%;margin-left: 25%;}
-.workdetail .box a{
+/*.workdetail .box a{
 	color: black;
 	width: 40%;
 	margin: -20px 0 50px 30%;
@@ -214,8 +250,12 @@ main .work ul li a img:last-child{
 	text-align: center;
 	background-color: pink;
 	border-radius: 30px;
-	padding: 10px 0;
-}
+	padding: 10px 0;}*/
+	.workdetail .box a img{
+	color: black;
+	width: 40%;
+	margin: -20px 0 50px 30%;
+	border-radius: 15px;}
 .workdetail .box a p{}
 /*work end*/
 
@@ -241,7 +281,7 @@ main .work ul li a img:last-child{
 .ranking main ul li a figure img{width: 100%;}
 .ranking main ul li a figure figcaption{color: black;}
 
-.ranking main a p{
+/*.ranking main a p{
 	margin-top: 20px;
 	margin-bottom: 50px;
 	font-size: 18px;
@@ -249,7 +289,12 @@ main .work ul li a img:last-child{
 	margin-left: 5%;
 	padding: 7px 0;
 	border-radius: 15px;
-	background-color: yellow;}
+	background-color: yellow;}*/
+	.ranking main a p img{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 90%;
+	border-radius: 15px;}
 
 .ollranking main ul li{margin-top: 10%;}
 .ollranking main li img.number{
