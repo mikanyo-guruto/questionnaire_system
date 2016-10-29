@@ -35,7 +35,7 @@
 
 <body class="drawer drawer--right top">
 	<header role="banner">
-		<h1><img src="assets/images/topbg.png" alt=""></h1>
+		<h1><img src="assets/images/toplogo.png" alt=""></h1>
 		<button type="button" class="drawer-toggle drawer-hamburger">
 			<span class="sr-only">toggle navigation</span>
 			<span class="drawer-hamburger-icon"></span>
@@ -66,14 +66,14 @@
 				<li class="it"><a href="world/it.html">IT</a></li>
 			</ul> -->
 			<ul>
-				<li class="game"><a href="user/list/game"><img src="./assets/images/game.png" alt="ゲーム"></a></li>
-				<li class="illust"><a href="user/list/illust"><img src="./assets/images/illust.png" alt="イラスト"></a></li>
-				<li class="it"><a href="user/list/it"><img src="./assets/images/it.png" alt="IT"></a></li>
+				<li class="game"><a href="user/list/game"><img src="assets/images/game.svg" alt=""></a></li>
+				<li class="illust"><a href="user/list/illust"><img src="assets/images/illust.svg" alt=""></a></li>
+				<li class="it"><a href="user/list/it"><img src="assets/images/it.svg" alt=""></a></li>
 			</ul>
 		</div>
 		<div class="question">
 			<h2>会場アンケートにご協力お願いします</h2>
-			<a href="user/questionnaires"><p>会場アンケート</p></a>
+			<a href="#"><p><img src="assets/images/ollanke.svg" alt=""></p></a>
 		</div>
 	</main>
 <!-- <footer role="contentinfo"></footer> -->
