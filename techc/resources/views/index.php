@@ -73,7 +73,7 @@
 		</div>
 		<div class="question">
 			<h2>会場アンケートにご協力お願いします</h2>
-			<a href="#"><p><img src="assets/images/ollanke.svg" alt=""></p></a>
+			<a href="/user/questionnaires/venue_questionnaire"><p><img src="assets/images/ollanke.svg" alt=""></p></a>
 		</div>
 	</main>
 <!-- <footer role="contentinfo"></footer> -->

@@ -17,7 +17,9 @@ Route::get('/', function() {
 
 Route::get('user/list/{genre}', 'ProductController@genre');
 
-Route::get('user/questionnaires/user_questionnaire', 'QuestionnaireController@index');
+Route::get('user/questionnaires/user_questionnaire', 'UserQuestionnaireController@index');
+
+Route::get('user/questionnaires/venue_questionnaire', 'VenueQuestionnaireController@index');
 
 Route::get('user/list/detail/{id}', 'Product_detailController@index');
 
