@@ -1,0 +1,14 @@
+.create_btn {
+	float: right;
+	font-size: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.year_questionnaire .ques {
+	font-size: 24px;
+	width: 100%;
+}
+.year_questionnaire .ans {
+	font-size: 20px;
+	padding-left: 10px;
+}
