@@ -17,7 +17,7 @@ Route::get('/', function() {
 
 Route::get('user/list/{genre}', 'ProductController@genre');
 
-Route::get('user/questionnaires', 'QuestionnaireController@index');
+Route::get('user/questionnaires/user_questionnaire', 'QuestionnaireController@index');
 
 Route::get('user/list/detail/{id}', 'Product_detailController@index');
 
@@ -41,8 +41,8 @@ Route::get('user/ranking/it', function() {
 	return view('user/ranking/it');
 });
 
-Route::get('user/questionnaire', function() {
-	return redirect('user/questionnaires/questionnaire');
+Route::get('user/user_questionnaire', function() {
+	return redirect('user/questionnaires/user_questionnaire');
 });
 
 // adminルーティング

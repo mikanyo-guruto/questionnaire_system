@@ -23,7 +23,7 @@
 <![endif]-->
 <!--[if gt IE 9]><!-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="../../../assets/script/script.js"></script>
+<script type="text/javascript" src="{{{asset('assets/js/user/script.js')}}}"></script>
 <!--<![endif]-->
 <!-- drawer.css -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/css/drawer.min.css">
@@ -57,7 +57,7 @@
 				<li><a class="drawer-menu-item" href="/user/list/game">Gameワールド</a></li>
 				<li><a class="drawer-menu-item" href="/user/list/illust">Illustワールド</a></li>
 				<li><a class="drawer-menu-item" href="/user/list/it">ITワールド</a></li>
-				<li><a class="drawer-menu-item" href="/user/ranking/index">ランキング</a></li>
+				<li><a class="drawer-menu-item" href="/user/ranking/index">ランキング</a></li>	
 			</ul>
 		</nav>
 	</header>
@@ -78,7 +78,7 @@
 			<div class="box">
 				<h3>投票お願いします</h3>
 				<img src="../../../assets/images/box.png" alt="">
-				<a href="/user/questionnaires/questionnaire"><p>投票する</p></a>
+				<a href="/user/questionnaires/user_questionnaire"><p>投票する</p></a>
 			</div>
 		</div>
 	</main>
