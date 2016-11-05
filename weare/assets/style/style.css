@@ -9,7 +9,7 @@
 
 body{width: 100%;height: 100%;margin: 0;padding: 0;
 	font-family: 'Noto Sans Japanese', serif;}
-a,a:link,a:visited,a:hover,a:active{text-decoration: none;color: black;}
+a,a:link,a:visited,a:hover,a:active{text-decoration: none;color: #3a3a3a;}
 h2{font-size: 24px;}
 .afcf:after{
 	content:".";
@@ -23,8 +23,13 @@ body.game header{background-color: #3a3a3a; color: white;}
 body.illust header{background-color: #3a3a3a;color: white;}
 body.it header{background-color: #3a3a3a; color: white;}
 
+body.ranking h2{border-bottom: solid 3px pink;}
+body.game h2{   border-bottom: solid 3px pink;}
+body.illust h2{ border-bottom: solid 3px pink;}
+body.it h2{     border-bottom: solid 3px pink;}
+
 .drawer button{margin-top: 7px;}
-header ul li{border-bottom: solid 1px black;}
+header ul li{border-bottom: solid 1px #3a3a3a;}
 header ul li a{display: block;}
 
 .notop header{
@@ -38,7 +43,9 @@ header ul li a{display: block;}
 }
 .notop header h2{
 	margin: 0;
-	padding: 18px 0 0 85px;
+	margin-left: 50px;
+	margin-right: 45px;
+	padding: 18px 0 0 30px;
 	font-size: 28px;
 }
 
@@ -53,7 +60,7 @@ header ul li a{display: block;}
 ul.drawer-menu{
 	background-color: #fefefe;
 	height: 100%;
-	list-style-type: circle; 
+	list-style-type: circle;
 }
 .drawer-menu li a:after{
 	content: ">";
@@ -95,23 +102,23 @@ ul.drawer-menu{
 	margin-top: -18px;
 	font-weight: bold;
 	color: #E95377;
-	text-shadow:  1.5px 1.5px 1px black,  -1.5px 1.5px 1px black,
-				  1.5px -1.5px 1px black,  -1.5px -1.5px 1px black;}
+	text-shadow:  1.5px 1.5px 1px #3a3a3a,  -1.5px 1.5px 1px #3a3a3a,
+				  1.5px -1.5px 1px #3a3a3a,  -1.5px -1.5px 1px #3a3a3a;}
 .top .ranking ul{padding-top: 20px;}
 .top .ranking ul li{
 	width: 50%;
 	margin: 0 25% 0 25%;
-	border-bottom: solid 1px black;}
+	border-bottom: solid 1px #3a3a3a;}
 .top .ranking ul li a{display: block;margin: 10px 0 -3px 0;}
 .top .ranking ul li a p{
 	float: left;
 	margin-left: 10%;
-	color: black;}
+	color: #3a3a3a;}
 .top .ranking ul li a span{
 	text-align: center;
-	color: black;
+	color: #3a3a3a;
 	margin-left: 0%;}
-	
+
 .top .contents{margin-top: 50px;}
 .top .contents ul li{
 	float: left;
@@ -150,10 +157,10 @@ main .work ul li{
 	width: 100%;
 	position: relative;
 	margin-top: 20px;
-	border-top: solid 1px black;
-	border-bottom: solid 1px black;
+	border-top: solid 1px #3a3a3a;
+	border-bottom: solid 1px #3a3a3a;
 }
-main .work ul li a{color: black;display: block;}
+main .work ul li a{color: #3a3a3a;display: block;}
 main .work ul li a img{
 	width: 25%;
 	padding-top: 5px;
@@ -174,12 +181,6 @@ main .work ul li a img:last-child{
 /*world end*/
 
 /* work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work */
-body.illust .workdetail ul li p:first-child{       background-color: pink;}
-body.illust .workdetail ul li.detail p:first-child{background-color: pink;}
-body.it .workdetail ul li p:first-child{           background-color: blue;}
-body.it .workdetail ul li.detail p:first-child{    background-color: blue;}
-body.game .workdetail ul li p:first-child{         background-color: orange;}
-body.game .workdetail ul li.detail p:first-child{  background-color: orange;}
 
 .workdetail img{
 	width: 100%;
@@ -194,6 +195,20 @@ body.game .workdetail ul li.detail p:first-child{  background-color: orange;}
 	width: 40%;
 	border-right: none;
 }
+.workdetail ul li.detail p:first-child{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	border-bottom: none;
+}
+body .workdetail ul li p:first-child{
+	background-color: #3a3a3a;
+	color: white;
+}
+body .workdetail ul li.detail p:first-child{
+	background-color: #3a3a3a;
+	color: white;
+}
 .workdetail ul li p{
 	float: left;
 	width: 60%;
@@ -201,30 +216,26 @@ body.game .workdetail ul li.detail p:first-child{  background-color: orange;}
 	background-color: white;
 	padding: 10px 0;
 	line-height: 1.5;
-	border: solid 1px gray;
 	box-sizing: border-box;
-}
-.workdetail ul li.detail p:first-child{
-	width: 100%;
-	height: 100%;	
-	text-align: center;
-	border-bottom: none;
+
+	border: solid 1px #3a3a3a;
 }
 .workdetail ul li.detail p{
 	width: 100%;
 	text-align: left;
 	background-color: white;
 	padding: 10px 5px;
-	border: solid 1px gray;
 	box-sizing: border-box;
+
+	border: solid 1px #3a3a3a;
 }
 
-.workdetail .box h3{text-align: center;margin: 30px 0 -40px 0;padding: 0;}
-.workdetail .box img{width: 50%;margin-left: 25%;}
+.workdetail .box h3{text-align: center;margin: 30px 0 0 0;padding: 0;}
+.workdetail .box img{width: 30%;margin-left: 36.8%;}
 	.workdetail .box a img{
-	color: black;
+	color: #3a3a3a;
 	width: 40%;
-	margin: -20px 0 50px 30%;
+	margin: 0px 0 50px 30%;
 	border-radius: 15px;}
 .workdetail .box a p{}
 /*work end*/
@@ -233,7 +244,7 @@ body.game .workdetail ul li.detail p:first-child{  background-color: orange;}
 .ranking main{text-align: center;}
 .ranking main h2{
 	width: 95%;
-	border-bottom: solid 1px black;
+	border-bottom: solid 1px #3a3a3a;
 	margin-top: 50px;
 	padding-left: 5%;
 	text-align: left;
@@ -249,7 +260,7 @@ body.game .workdetail ul li.detail p:first-child{  background-color: orange;}
 .ranking main ul li.bronze>img{width: 30%;margin-top: 25%;}
 .ranking main ul li a figure{width: 100%;margin: -10px 0 0 0;padding: 0;}
 .ranking main ul li a figure img{width: 100%;}
-.ranking main ul li a figure figcaption{color: black;}
+.ranking main ul li a figure figcaption{color: #3a3a3a;}
 
 /*.ranking main a p{
 	margin-top: 20px;
