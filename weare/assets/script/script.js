@@ -25,6 +25,7 @@ $(function(){
 
   var tabsLiLen = $jsTabsLi.length;
   var tabsLiWid = $jsTabsLi.eq(0).width();
+});
 
 //   //タブエリアの横幅指定
 //   $jsTabs.css('width',tabsLiWid * tabsLiLen);
