@@ -47,16 +47,16 @@
 				<li><a class="drawer-menu-item" href="/list/game">Gameワールド</a></li>
 				<li><a class="drawer-menu-item" href="/list/illust">Illustワールド</a></li>
 				<li><a class="drawer-menu-item" href="/list/it">ITワールド</a></li>
-				<li><a class="drawer-menu-item" href="/ranking/index">ランキング</a></li>
+				<li><a class="drawer-menu-item" href="/ranking/ranking_all">ランキング</a></li>
 		</nav>
 	</header>
 	<main role="main">
 		<div class="ranking">
 			<h2>ランキング速報</h2>
 			<ul>
-				<li class="afcf"><a href="#"><p>1位</p><span>タイトル</span></a></li>
-				<li class="afcf"><a href="#"><p>2位</p><span>作品名</span></a></li>
-				<li class="afcf"><a href="#"><p>3位</p><span>OOOO</span></a></li>
+				<li class="afcf"><a href="ranking/ranking_all"><p>1位</p><span>hoge</span></a></li>
+				<li class="afcf"><a href="ranking/ranking_all"><p>2位</p><span>hoge</span></a></li>
+				<li class="afcf"><a href="ranking/ranking_all"><p>3位</p><span>hoge</span></a></li>
 			</ul>
 		</div>
 		<div class="contents afcf">

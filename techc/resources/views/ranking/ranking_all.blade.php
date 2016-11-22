@@ -56,135 +56,120 @@
 			<h2>総合ランキング</h2>
 			<div>
 			<ul class="afcf">
-				<li class="gold">
-					<img src="../assets/images/gold.png" alt="">
-					<a href="$">
-						<figure>
-							<img src="../assets/images/techlogo.png" alt="">
-							<figcaption>タイトル</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li class="silver">
-					<img src="../assets/images/silver.png" alt="">
-					<a href="$">
-						<figure>
-							<img src="../assets/images/techlogo.png" alt="">
-							<figcaption>タイトル</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li class="bronze">
-					<img src="../assets/images/bronze.png" alt="">
-					<a href="$">
-						<figure>
-							<img src="../assets/images/techlogo.png" alt="">
-							<figcaption>タイトル</figcaption>
-						</figure>
-					</a>
-				</li>
+				@if(!empty($ary))
+					<?php $i = 0; ?>
+					@foreach($ary as $key)
+						<?php $class = checkclass($i); ?>
+						<?php echo $i; ?>
+						<li class="<?php echo $class; ?>">
+							<img src="../assets/images/<?php echo $class; ?>.png" alt="">
+							<a href="$">
+								<figure>
+									<img src="../assets/{{$key->img}}" alt="">
+									<figcaption>{{$key->product_name}}</figcaption>
+								</figure>
+							</a>
+						</li>
+						<?php $i++; ?>
+					@endforeach
+				@else					
+					<p>作品がまだ評価されていません</p>
+				@endif
 			</ul>
 			<a href="/ranking/all"><p>もっと見る</p></a>
 
 			<h2>ゲームランキング</h2>
 			<div class="afcf">
 			<ul class="afcf">
-				<li class="gold">
-					<img src="../assets/images/gold.png" alt="">
-					<a href="$">
-						<figure>
-							<img src="../assets/images/techlogo.png" alt="">
-							<figcaption>タイトル</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li class="silver">
-					<img src="../assets/images/silver.png" alt="">
-					<a href="$">
-						<figure>
-							<img src="../assets/images/techlogo.png" alt="">
-							<figcaption>タイトル</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li class="bronze">
-					<img src="../assets/images/bronze.png" alt="">
-					<a href="$">
-						<figure>
-							<img src="../assets/images/techlogo.png" alt="">
-							<figcaption>タイトル</figcaption>
-						</figure>
-					</a>
-				</li>
+				@if(!empty($ary))
+					<?php $i = 0; ?>
+					@foreach($ary as $key)
+						<?php $class = checkclass($i); ?>
+						<li class="<?php echo $class; ?>">
+							<img src="../assets/images/<?php echo $class; ?>.png" alt="">
+							<a href="$">
+								<figure>
+									<img src="../assets/{{$key->img}}" alt="">
+									<figcaption>{{$key->product_name}}</figcaption>
+								</figure>
+							</a>
+						</li>
+						<?php $i++; ?>
+					@endforeach
+				@else					
+					<p>作品がまだ評価されていません</p>
+				@endif
 			</ul>
 			<a href="/ranking/game"><p>もっと見る</p></a>
 
 			<h2>イラストランキング</h2>
 			<div class="afcf">
 			<ul class="afcf">
-				<li class="gold">
-					<img src="../assets/images/gold.png" alt="">
-					<a href="$">
-						<figure>
-							<img src="../assets/images/techlogo.png" alt="">
-							<figcaption>タイトル</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li class="silver">
-					<img src="../assets/images/silver.png" alt="">
-					<a href="$">
-						<figure>
-							<img src="../assets/images/techlogo.png" alt="">
-							<figcaption>タイトル</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li class="bronze">
-					<img src="../assets/images/bronze.png" alt="">
-					<a href="$">
-						<figure>
-							<img src="../assets/images/techlogo.png" alt="">
-							<figcaption>タイトル</figcaption>
-						</figure>
-					</a>
-				</li>
+				@if(!empty($ary))
+					<?php $i = 0; ?>
+					@foreach($ary as $key)
+						<?php $class = checkclass($i); ?>
+						<li class="<?php echo $class; ?>">
+							<img src="../assets/images/<?php echo $class; ?>.png" alt="">
+							<a href="$">
+								<figure>
+									<img src="../assets/{{$key->img}}" alt="">
+									<figcaption>{{$key->product_name}}</figcaption>
+								</figure>
+							</a>
+						</li>
+						<?php $i++; ?>
+					@endforeach
+				@else					
+					<p>作品がまだ評価されていません</p>
+				@endif
 			</ul>
 			<a href="/ranking/illust"><p>もっと見る</p></a>
 
 			<h2>ITランキング</h2>
 			<div class="afcf">
 			<ul class="afcf">
-				<li class="gold">
-					<img src="../assets/images/gold.png" alt="">
-					<a href="$">
-						<figure>
-							<img src="../assets/images/techlogo.png" alt="">
-							<figcaption>タイトル</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li class="silver">
-					<img src="../assets/images/silver.png" alt="">
-					<a href="$">
-						<figure>
-							<img src="../assets/images/techlogo.png" alt="">
-							<figcaption>タイトル</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li class="bronze">
-					<img src="../assets/images/bronze.png" alt="">
-					<a href="$">
-						<figure>
-							<img src="../assets/images/techlogo.png" alt="">
-							<figcaption>タイトル</figcaption>
-						</figure>
-					</a>
-				</li>
+				@if(!empty($ary))
+					<?php $i = 0; ?>
+					@foreach($ary as $key)
+						<?php $class = checkclass($i); ?>
+						<li class="<?php echo $class; ?>">
+							<img src="../assets/images/<?php echo $class; ?>.png" alt="">
+							<a href="$">
+								<figure>
+									<img src="../assets/{{$key->img}}" alt="">
+									<figcaption>{{$key->product_name}}</figcaption>
+								</figure>
+							</a>
+						</li>
+						<?php $i++; ?>
+					@endforeach
+				@else					
+					<p>作品がまだ評価されていません</p>
+				@endif
 			</ul>
 			</div>
 			<a href="/ranking/it"><p>もっと見る</p></a>
 	</main>
+
+	<?php
+		function checkclass ($i) {
+			$class = null;
+			switch ($i) {
+				case 0:
+					$class = "gold";
+					break;
+				
+				case 1:
+					$class = "silver";
+					break;
+
+				case 2:
+					$class = "bronze";
+					break;
+			}
+			return $class;
+		}
+	?>
 <!-- <footer role="contentinfo"></footer> -->
 </body>

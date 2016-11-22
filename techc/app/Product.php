@@ -30,4 +30,23 @@ class Product extends Model
 
         return $val;
     }
+
+    static public function ranking_all (){
+        $val = DB::table('products')
+            ->orderBy('value','DESC')
+            ->take(3)
+            ->get();
+
+        return $val;
+    }
+
+    static public function ranking_game (){
+        $val = DB::table('products')
+            ->where('genre',$genre)
+            ->orderBy('value','DESC')
+            ->take(3)
+            ->get();
+
+        return $val;
+    }
 }

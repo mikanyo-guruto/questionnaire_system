@@ -21,12 +21,10 @@ Route::get('/questionnaires/questionnaire', 'QuestionnaireController@index');
 
 Route::get('/list/detail/{id}', 'Product_detailController@index');
 
-Route::get('/ranking/index', function() {
-	return view('ranking/index');
-});
+Route::get('/ranking/ranking_all', 'RankingController@ranking_all');
 
-Route::get('/ranking/all', function() {
-	return view('ranking/all');
+Route::get('/ranking/synthesis', function() {
+	return view('ranking/synthesis');
 });
 
 Route::get('/ranking/game', function() {
