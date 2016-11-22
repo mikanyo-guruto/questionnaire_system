@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function() {
-    return view('index');
-});
+Route::get('/', 'RankingController@top');
 
 Route::get('/list/{genre}', 'ProductController@genre');
 

@@ -31,9 +31,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
 <!-- drawer.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/js/drawer.min.js"></script>
+
+<script language="JavaScript">
+    <!--
+            //タイマーをセット
+    function tm(){
+        tm = setInterval("location.reload()",30000);
+    }
+    //-->
+</script>
 </head>
 
-<body class="drawer drawer--right notop ranking">
+<body class="drawer drawer--right notop ranking" onLoad="tm()">
 	<header role="banner">
 		<h1><a href="/"><img src="../assets/images/techlogo.png" alt=""></a></h1>
 		<h2>ランキング</h2>

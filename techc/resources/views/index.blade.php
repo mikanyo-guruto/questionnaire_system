@@ -31,9 +31,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
 <!-- drawer.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.1.0/js/drawer.min.js"></script>
+
+<script language="JavaScript">
+    <!--
+            //タイマーをセット
+    function tm(){
+        tm = setInterval("location.reload()",30000);
+    }
+    //-->
+</script>
 </head>
 
-<body class="drawer drawer--right top">
+<body class="drawer drawer--right top" onLoad="tm()">
 	<header role="banner">
 		<h1><img src="assets/images/toplogo.png" alt=""></h1>
 		<button type="button" class="drawer-toggle drawer-hamburger">
@@ -54,9 +63,16 @@
 		<div class="ranking">
 			<h2>ランキング速報</h2>
 			<ul>
-				<li class="afcf"><a href="ranking/ranking_all"><p>1位</p><span>hoge</span></a></li>
-				<li class="afcf"><a href="ranking/ranking_all"><p>2位</p><span>hoge</span></a></li>
-				<li class="afcf"><a href="ranking/ranking_all"><p>3位</p><span>hoge</span></a></li>
+				<?php $i = 0; ?>
+				@foreach($ary as $key)
+					<li class="afcf">
+						<a href="ranking/ranking_all">
+							<p><?php echo $i+1 ?>位</p>
+							<span>{{$key->product_name}}</span>
+						</a>
+					</li>
+					<?php $i++; ?>
+				@endforeach
 			</ul>
 		</div>
 		<div class="contents afcf">

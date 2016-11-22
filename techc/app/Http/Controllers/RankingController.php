@@ -16,7 +16,12 @@ class RankingController extends Controller
 		return view('ranking/ranking_all',compact('all','ranking_illust','ranking_game','ranking_it'));
 	}
 
-	
+	public function top (){
+		$ary = Product::ranking_all();
+
+		return view('index',compact('ary'));
+	}
+
 	public function ranking_all (){
 		$ary = Product::ranking_all();
 
