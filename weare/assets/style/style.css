@@ -9,7 +9,8 @@
 
 body{width: 100%;height: 100%;margin: 0;padding: 0;
 	font-family: 'Noto Sans Japanese', serif;}
-a,a:link,a:visited,a:hover,a:active{text-decoration: none;color: #3a3a3a;}
+a,a:link,a:visited,a:hover{text-decoration: none;color: #3a3a3a;}
+a:active{opacity: 0.5}
 h2{font-size: 24px;}
 .afcf:after{
 	content:".";
@@ -37,15 +38,15 @@ header ul li a{display: block;}
 	height: 80px;}
 .notop header h1{margin: 0;padding: 0;}
 .notop header h1 img{
-	margin: 10px 0 0 10px;padding: 0;
+	margin: 22px 0 0 10px;padding: 0;
 	float: left;
-	width: 60px;
+	width: 36px;
 }
 .notop header h2{
 	margin: 0;
-	margin-left: 50px;
+	margin-left: 0px;
 	margin-right: 45px;
-	padding: 18px 0 0 30px;
+	padding: 18px 0 0 55px;
 	font-size: 28px;
 }
 
@@ -87,15 +88,26 @@ ul.drawer-menu{
 	background-repeat: no-repeat;
 	background-position: center top;
 }
-.top header{background-color: rgba(255,255,255,0.9);margin: 0;padding: 1px 0;}
+.top header{
+	/*background-color: rgba(255,255,255,0.9);margin: 0;padding: 1px 0;*/
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100 */
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,255,255,0.7) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,0.7) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
 .top main{background-color: rgba(255,255,255,1);}
+.top header h1{margin: 0;padding: 0;}
 .top header h1 img{
 	width: 50%;
-	margin: 20px 0 30px 0;
+	margin: 50px 0 60px 0;
 	margin-left: 25%;}
 .top .ranking{
 	text-align: center;}
-.top .ranking h2{
+/*.top .ranking h2{
 	position: absolute;
 	left: 0;right: 0;
 	margin: auto;
@@ -103,21 +115,69 @@ ul.drawer-menu{
 	font-weight: bold;
 	color: #E95377;
 	text-shadow:  1.5px 1.5px 1px #3a3a3a,  -1.5px 1.5px 1px #3a3a3a,
-				  1.5px -1.5px 1px #3a3a3a,  -1.5px -1.5px 1px #3a3a3a;}
-.top .ranking ul{padding-top: 20px;}
+				  1.5px -1.5px 1px #3a3a3a,  -1.5px -1.5px 1px #3a3a3a;}*/
+
+.top .ranking h2 {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 0 15px;
+	width: 80%;
+	margin-left: 0;
+	height: 40px;
+	line-height: 34px;
+	color: #3a3a3a;
+	text-align: center;
+	background: white;
+	border: 3px solid #3a3a3a;
+	z-index: 0;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.top .ranking h2:before {
+	content: "";
+	position: absolute;
+	bottom: -8px; left: 50%;
+	margin-left: -9px;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 9px 9px 0 9px;
+	border-color: white transparent transparent transparent;
+	z-index: 0;
+}
+.top .ranking h2:after {
+	content: "";
+	position: absolute;
+	bottom: -12px; left: 50%;
+	margin-left: -10px;
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 10px 10px 0 10px;
+	border-color: #3a3a3a transparent transparent transparent;
+	z-index: -1;
+}
+
+.top .ranking ul{padding-top: 0px;}
 .top .ranking ul li{
 	width: 50%;
 	margin: 0 25% 0 25%;
 	border-bottom: solid 1px #3a3a3a;}
-.top .ranking ul li a{display: block;margin: 10px 0 -3px 0;}
-.top .ranking ul li a p{
-	float: left;
-	margin-left: 10%;
-	color: #3a3a3a;}
+.top .ranking ul li a{display: table;margin: 10px 0 -3px 0;}
+.top .ranking ul li img{
+	display: table-cell;
+	width: 30px;float: left;
+	padding: 5px 0 5px 10px;}
 .top .ranking ul li a span{
+	width: 100%;
+	display: table-cell;
 	text-align: center;
 	color: #3a3a3a;
-	margin-left: 0%;}
+	/*margin-left: 10px;*/
+	/*padding-left: 5px;*/
+	vertical-align: middle;
+}
 
 .top .contents{margin-top: 50px;}
 .top .contents ul li{
@@ -220,7 +280,7 @@ main .work ul li a img:last-child{
 .ranking main{text-align: center;}
 .ranking main h2{
 	width: 95%;
-	border-bottom: solid 1px #3a3a3a;
+	border-bottom: solid 2px #3a3a3a;
 	margin-top: 50px;
 	padding-left: 5%;
 	text-align: left;
