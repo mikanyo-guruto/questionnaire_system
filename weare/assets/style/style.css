@@ -24,7 +24,7 @@ body.game header{background-color: #3a3a3a; color: white;}
 body.illust header{background-color: #3a3a3a;color: white;}
 body.it header{background-color: #3a3a3a; color: white;}
 
-body.ranking h2{border-bottom: solid 3px pink;}
+body.ranking h2,.ollranking h2{border-bottom: solid 3px pink;}
 body.game h2{   border-bottom: solid 3px pink;}
 body.illust h2{ border-bottom: solid 3px pink;}
 body.it h2{     border-bottom: solid 3px pink;}
@@ -191,7 +191,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 .top .question{
 	text-align: center;
-	margin-top: 50px;
+	margin: 30px 0;
 }
 .top .question h2{
 	font-size: 18px;
@@ -278,10 +278,14 @@ main .work ul li a img:last-child{
 
 /*ranking ranking ranking ranking ranking ranking ranking ranking ranking ranking ranking ranking ranking ranking ranking ranking ranking ranking ranking */
 .ranking main{text-align: center;}
+.ranking main h2:first-child{
+	margin-top: 50px;
+}
 .ranking main h2{
 	width: 95%;
 	border-bottom: solid 2px #3a3a3a;
-	margin-top: 50px;
+	margin-top: 0px;
+	margin-bottom: 30px;
 	padding-left: 5%;
 	text-align: left;
 }
@@ -308,8 +312,7 @@ main .work ul li a img:last-child{
 	border-radius: 15px;
 	background-color: yellow;}*/
 	.ranking main a p img{
-	margin-top: 50px;
-	margin-bottom: 50px;
+	margin: 30px 0;
 	width: 90%;
 	border-radius: 15px;}
 
@@ -324,7 +327,7 @@ main .work ul li a img:last-child{
 	position: absolute;
 	font-size: 20px;
 	left: 8.4%;
-	top: -24%;
+	top: -28%;
 }
 /*ranking end*/
 @media screen and (max-width: px) {}
