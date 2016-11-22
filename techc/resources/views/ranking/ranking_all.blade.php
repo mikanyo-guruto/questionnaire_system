@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>サイトタイトル</title>
+<title>ランキング</title>
 
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -56,14 +56,13 @@
 			<h2>総合ランキング</h2>
 			<div>
 			<ul class="afcf">
-				@if(!empty($ary))
+				@if(!empty($all))
 					<?php $i = 0; ?>
-					@foreach($ary as $key)
+					@foreach($all as $key)
 						<?php $class = checkclass($i); ?>
-						<?php echo $i; ?>
 						<li class="<?php echo $class; ?>">
 							<img src="../assets/images/<?php echo $class; ?>.png" alt="">
-							<a href="$">
+							<a href="/list/detail/{{$key->id}}">
 								<figure>
 									<img src="../assets/{{$key->img}}" alt="">
 									<figcaption>{{$key->product_name}}</figcaption>
@@ -76,42 +75,42 @@
 					<p>作品がまだ評価されていません</p>
 				@endif
 			</ul>
-			<a href="/ranking/all"><p>もっと見る</p></a>
+			<a href="/ranking/synthesis"><p>もっと見る</p></a>
 
 			<h2>ゲームランキング</h2>
 			<div class="afcf">
 			<ul class="afcf">
-				@if(!empty($ary))
-					<?php $i = 0; ?>
-					@foreach($ary as $key)
-						<?php $class = checkclass($i); ?>
-						<li class="<?php echo $class; ?>">
-							<img src="../assets/images/<?php echo $class; ?>.png" alt="">
-							<a href="$">
-								<figure>
-									<img src="../assets/{{$key->img}}" alt="">
-									<figcaption>{{$key->product_name}}</figcaption>
-								</figure>
-							</a>
-						</li>
-						<?php $i++; ?>
-					@endforeach
+				@if(!empty($ranking_game))
+						<?php $i = 0; ?>
+						@foreach($ranking_game as $key)
+							<?php $class = checkclass($i); ?>
+							<li class="<?php echo $class; ?>">
+								<img src="../assets/images/<?php echo $class; ?>.png" alt="">
+								<a href="/list/detail/{{$key->id}}">
+									<figure>
+										<img src="../assets/{{$key->img}}" alt="">
+										<figcaption>{{$key->product_name}}</figcaption>
+									</figure>
+								</a>
+							</li>
+							<?php $i++; ?>
+						@endforeach
 				@else					
 					<p>作品がまだ評価されていません</p>
 				@endif
 			</ul>
-			<a href="/ranking/game"><p>もっと見る</p></a>
+			<a href="/ranking/ranking_genre/game"><p>もっと見る</p></a>
 
 			<h2>イラストランキング</h2>
 			<div class="afcf">
 			<ul class="afcf">
-				@if(!empty($ary))
+				@if(!empty($ranking_illust))
 					<?php $i = 0; ?>
-					@foreach($ary as $key)
+					@foreach($ranking_illust as $key)
 						<?php $class = checkclass($i); ?>
 						<li class="<?php echo $class; ?>">
 							<img src="../assets/images/<?php echo $class; ?>.png" alt="">
-							<a href="$">
+							<a href="/list/detail/{{$key->id}}">
 								<figure>
 									<img src="../assets/{{$key->img}}" alt="">
 									<figcaption>{{$key->product_name}}</figcaption>
@@ -124,18 +123,18 @@
 					<p>作品がまだ評価されていません</p>
 				@endif
 			</ul>
-			<a href="/ranking/illust"><p>もっと見る</p></a>
+			<a href="/ranking/ranking_genre/illust"><p>もっと見る</p></a>
 
 			<h2>ITランキング</h2>
 			<div class="afcf">
 			<ul class="afcf">
-				@if(!empty($ary))
+				@if(!empty($ranking_it))
 					<?php $i = 0; ?>
-					@foreach($ary as $key)
+					@foreach($ranking_it as $key)
 						<?php $class = checkclass($i); ?>
 						<li class="<?php echo $class; ?>">
 							<img src="../assets/images/<?php echo $class; ?>.png" alt="">
-							<a href="$">
+							<a href="/list/detail/{{$key->id}}">
 								<figure>
 									<img src="../assets/{{$key->img}}" alt="">
 									<figcaption>{{$key->product_name}}</figcaption>
@@ -149,7 +148,7 @@
 				@endif
 			</ul>
 			</div>
-			<a href="/ranking/it"><p>もっと見る</p></a>
+			<a href="/ranking/ranking_genre/it"><p>もっと見る</p></a>
 	</main>
 
 	<?php

@@ -8,21 +8,30 @@ use App\Product;
 class RankingController extends Controller
 {
 	public function index (){
-		%$ary = Product::
+		$all = Product::ranking_all();
+		$ranking_illust = Product::ranking_genre("illust");
+		$ranking_game = Product::ranking_genre("game");
+		$ranking_it = Product::ranking_genre("it");
+
+		return view('ranking/ranking_all',compact('all','ranking_illust','ranking_game','ranking_it'));
 	}
 
 	
 	public function ranking_all (){
 		$ary = Product::ranking_all();
 
-		var_dump($ary);
-
-		return view('ranking/ranking_all')->with(compact('ary'));
+		return view('ranking/ranking_all',compact('ary'));
 	}
 
-	public function ranking_genre ($genre){
-		$ary = Product::ranking_genre($genre);
+	public function ranking_synthesis (){
+		$ary = Product::ranking_synthesis();
 
-		return view('ranking/ranking_all')->with(compact('ary','genre'));
+		return view('ranking/synthesis',compact('ary'));
+	}
+
+	public function ranking_genre_all ($genre){
+		$ary = Product::ranking_genre_all($genre);
+
+		return view('ranking/ranking_genre',compact('ary','genre'));
 	}
 }

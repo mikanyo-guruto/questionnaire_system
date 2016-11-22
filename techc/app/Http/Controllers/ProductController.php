@@ -10,6 +10,6 @@ class ProductController extends Controller
 	public function genre ($genre) {
 		$ary = Product::genre($genre);
 
-		return view('/list/list')->with(compact('ary','genre'));
+		return view('/list/list',compact('ary','genre'));
 	}
 }

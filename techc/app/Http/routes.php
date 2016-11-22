@@ -21,23 +21,11 @@ Route::get('/questionnaires/questionnaire', 'QuestionnaireController@index');
 
 Route::get('/list/detail/{id}', 'Product_detailController@index');
 
-Route::get('/ranking/ranking_all', 'RankingController@ranking_all');
+Route::get('/ranking/ranking_all', 'RankingController@index');
 
-Route::get('/ranking/synthesis', function() {
-	return view('ranking/synthesis');
-});
+Route::get('/ranking/synthesis', 'RankingController@ranking_synthesis');
 
-Route::get('/ranking/game', function() {
-	return view('ranking/game');
-});
-
-Route::get('/ranking/illust', function() {
-	return view('ranking/illust');
-});
-
-Route::get('/ranking/it', function() {
-	return view('ranking/it');
-});
+Route::get('/ranking/ranking_genre/{genre}', 'RankingController@ranking_genre_all');
 
 Route::get('/questionnaire', function() {
 	return redirect('questionnaires/questionnaire');

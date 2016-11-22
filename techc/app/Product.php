@@ -31,6 +31,16 @@ class Product extends Model
         return $val;
     }
 
+    static public function ranking_genre_all ($genre) {
+        $val = DB::table('products')
+            ->where('genre',$genre)
+            ->orderBy('value','DESC')
+            ->take(15)
+            ->get();
+
+        return $val;
+    }
+
     static public function ranking_all (){
         $val = DB::table('products')
             ->orderBy('value','DESC')
@@ -40,7 +50,16 @@ class Product extends Model
         return $val;
     }
 
-    static public function ranking_game (){
+    static public function ranking_synthesis (){
+        $val = DB::table('products')
+            ->orderBy('value','DESC')
+            ->take(15)
+            ->get();
+
+        return $val;
+    }
+
+    static public function ranking_genre ($genre){
         $val = DB::table('products')
             ->where('genre',$genre)
             ->orderBy('value','DESC')
