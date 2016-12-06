@@ -327,7 +327,7 @@ main .work ul li a img:last-child{
 	position: absolute;
 	font-size: 20px;
 	left: 8.4%;
-	top: -28%;
+	bottom: 97%;
 }
 /*ranking end*/
 @media screen and (max-width: px) {}
@@ -471,4 +471,15 @@ main .work ul li a img:last-child{
 	    text-align: left;
 	    line-height: 1.5em;
 	    font-size: 14px;
+}
+
+body.creator header{background-color: #3a3a3a; color: white;}
+body.creator header h2{border-bottom: solid 3px pink;}
+body.creator h3{
+	text-align: center;
+	margin: 50px 0 0 0;
+}
+body.creator main h2{
+	text-align: center;
+	margin-top: 10px;
 }
