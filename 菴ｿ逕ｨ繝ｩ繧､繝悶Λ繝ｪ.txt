@@ -1,0 +1,2 @@
+QRcode Perl CGI & PHP scripts ver. 0.50
+http://www.swetake.com/qrcode/qr_cgi.html
