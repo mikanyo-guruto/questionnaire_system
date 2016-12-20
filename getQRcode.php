@@ -35,19 +35,37 @@ $qr = new QRcode();
 $data = $qr->getAll();
 ?>
 <html>
+<style>
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+.wrap {
+	height: 1060px;
+	width: 750px;
+}
+.contents {
+	float: left;
+	height: 212px;
+	text-align: center;
+	width: 250px;
+}
+</style>
 <body>
+<div class="wrap">
 	<?php
 		$i=1;
 		foreach($data as $key) { 
 	?>
-		<div class="main<?php echo $i; ?>">
+		<div class="contents main<?php echo $i; ?>">
 		<img src="<?php echo $key['img']; ?>">
 		<p><?php echo $key['product_name']; ?></p>
 		</div>
 	<?php
-		$i++;
+			$i++;
 		}
 	?>
+</div>
 </body>
 </html>
 
