@@ -1,27 +1,36 @@
 <?php
+
+require __DIR__ . '\\conf.php';
+
 class QRcode
-{	
-	
-	private $dsn = 'mysql:dbname=questionnaire_system;host=localhost;charset=utf8mb4';
-	private $usr = 'root';
-	private $pas = '';
-	
+{
+	private $host;
+	private $dsn;
+	private $usr;
+	private $pas;
+
+	function __construct($host, $dsn, $usr, $pas) {
+		$this->host = $host;
+		$this->dsn = $dsn;
+		$this->usr = $usr;
+		$this->pas = $pas;
+	}
+
 	public function getAll() {
 		// pathの指定
-		$server = "http://localhost/csv";
 		$lib_path = "./qr_img0.50j/php/qr_img.php?d=";
-		$url = "http://dev2.m-fr.net/mikanyo-guruto/techc/public/user/list/detail/";
-		$qr_data = array();
-		
-		// DBへアクセス
-		$db = new PDO($this->dsn, $this->usr, $this->pas);
+		$url = "http://" . $this->host . "/techc/public/user/list/detail/";
+
+		// queryの実行
+		$dbh = new PDO($this->dsn, $this->usr, $this->pas);
 		$query = 'SELECT id, product_name, genre FROM products';
-		$stmt = $db->query($query);
-		
+		$stmt = $dbh->query($query);
+
 		// 配列へ格納
+		$qr_data = array();
 		while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 			// QRコードライブラリのURL+作品URL
-			$img_path = $server . $lib_path . $url . "/". $row['id'];
+			$img_path = $lib_path . $url . "/". $row['id'];
 			$tmp = array('url'=>NULL, 'img'=>NULL);
 			$tmp['product_name'] = $row['product_name'];
 			$tmp['img'] = $img_path;
@@ -30,8 +39,7 @@ class QRcode
 		return $qr_data;
 	}
 }
-
-$qr = new QRcode();
+$qr = new QRcode($host, $dsn, $usr, $pas);
 $data = $qr->getAll();
 ?>
 <html>

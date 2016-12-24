@@ -1,7 +1,6 @@
 <?php
-	$dsn = 'mysql:dbname=questionnaire_system;host=localhost;charset=utf8mb4';
-	$usr = 'root';
-	$pas = '';
+	require __DIR__ . '\\conf.php';
+	
 	$dbh = new PDO($dsn, $usr, $pas);
 	
 	// tableをtruncate
