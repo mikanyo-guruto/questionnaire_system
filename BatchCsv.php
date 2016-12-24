@@ -4,16 +4,19 @@
 	$pas = '';
 	$dbh = new PDO($dsn, $usr, $pas);
 	
-	// table‚ğtruncate
+	// tableã‚’truncate
 	$query = "TRUNCATE TABLE products";
 	$dbh->query($query)->fetch(PDO::FETCH_ASSOC);
 	$query = "TRUNCATE TABLE members";
 	$dbh->query($query)->fetch(PDO::FETCH_ASSOC);
 	
-	// CSVƒtƒ@ƒCƒ‹‚©‚çî•ñ‚ğæ“¾
+	// CSVãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰æƒ…å ±ã‚’å–å¾—
 	$file_path = __DIR__ . '\\csv_data\\';
 	$dir = new DirectoryIterator($file_path);
 	
+	// ã‚¨ãƒ©ãƒ¼æ™‚ã®ãƒ•ã‚¡ã‚¤ãƒ«æ ¼ç´ç”¨	
+	$error_log = array();
+
 	foreach($dir as $fileInfo) {
 		
 		if(true === $fileInfo->isDot()) continue;
@@ -21,7 +24,7 @@
 		$csv = new SplFileObject($file_path . $fileInfo->getFilename());
 		$csv->setFlags(SplFileObject::READ_CSV);
 		
-		// CSV‚Ì“Ç‚İ‚İ
+		// CSVãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰æƒ…å ±ã‚’å–å¾—
 		$i = false;
 		foreach($csv as $row) {
 
@@ -30,7 +33,7 @@
 			mb_convert_variables("UTF-8", "SHIFT-JIS", $row);
 
 			if($i) {
-				// ’l‚Ìæ“¾
+				// å€¤ã®å–å¾—
 				$product_name = $row[0];
 				$delegate = strstr($row[1], "\n", true);
 				$img = $row[2];
@@ -38,11 +41,10 @@
 				$period = $row[4];
 				$overview = $row[5];
 				
-				// ƒoƒŠƒf[ƒg
-				$error_log = array();
+				// ãƒãƒªãƒ‡ãƒ¼ãƒˆ			
 				$error_msg = $fileInfo->getFilename();
 				
-				// ƒWƒƒƒ“ƒ‹
+				// ã‚¸ãƒ£ãƒ³ãƒ«
 				switch(mb_strtolower(mb_convert_kana($genre, "r"))) {
 					case "it":
 						$genre = "it";
@@ -54,15 +56,15 @@
 						$genre = "illust";
 						break;
 					default:
-						array_push($error_log, $error_msg);
+						array_push($error_log, "[ERROR]validation(genre) : " . $error_msg);
 						continue;
 				}
-				
-				// ’l‚ğƒZƒbƒg
+
+				// å€¤ã‚’ã‚»ãƒƒãƒˆ
 				$product = array($product_name, $delegate, $img, $genre, $period, $overview);
 				$member = explode("\n", $row[1]);
 				
-				// productsƒe[ƒuƒ‹‚Éinsert
+				// productsãƒ†ãƒ¼ãƒ–ãƒ«ã«insert
 				$query_product = 'INSERT INTO products (product_name, delegate, img, genre, period, overview) VALUES (:product_name, :delegate, :img, :genre, :period, :overview)';
 				$query_member = 'INSERT INTO members (product_id, name) VALUES (:product_id, :name)';
 				$stmt_product = $dbh->prepare($query_product);
@@ -77,22 +79,33 @@
 				}
 				
 				if($stmt_product->execute()) {
-					// membersƒe[ƒuƒ‹‚Éinsert
+					// membersãƒ†ãƒ¼ãƒ–ãƒ«ã«insert
 					$id = $dbh->lastInsertId('id');
 					
 					foreach($member as $m) {
 						$stmt_member->bindValue(':product_id', $id, PDO::PARAM_STR);
 						$stmt_member->bindValue(':name', $m, PDO::PARAM_STR);
 						if($stmt_member->execute()) {
-							// ¬Œ÷
+							// æˆåŠŸ
 						}else{
-							array_push($error_log, $error_msg);
+							array_push($error_log, "[ERROR]insertError : " . $error_ms);
+							continue;
 						}
 					}
 				}else{
-					array_push($error_log, $error_msg);
+					array_push($error_log, "[ERROR]insertError : " . $error_msg);
+					continue;
 				}
 			}
 			$i = true;
+		}
+	}
+
+	if(empty($error_log)) {
+		echo "æˆåŠŸ";
+	}else{
+		foreach ($error_log as $key) {
+			# code...
+			echo $key . '<br/>';
 		}
 	}
